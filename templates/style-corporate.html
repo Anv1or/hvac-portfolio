@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Air Systems — Trusted Dallas HVAC Contractor</title>
+<meta name="description" content="Meridian Air Systems: professional HVAC repair, installation, and maintenance contracts for Dallas–Fort Worth homes and businesses. Call (214) 555-0150.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HVACBusiness","name":"Meridian Air Systems","telephone":"+1-214-555-0150","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75201","addressCountry":"US"},"areaServed":["Dallas","Irving","Las Colinas","Grand Prairie","Arlington"],"openingHours":"Mo-Su 00:00-23:59","priceRange":"$$"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#1d2b2a;--ink-soft:#566461;--paper:#ffffff;--mist:#f3f6f5;--slate:#27403d;--green:#1f8a70;--green-deep:#176b56;--gold:#c9a227;--line:#e2e8e6;--font-disp:"IBM Plex Serif",Georgia,serif;--font-body:"IBM Plex Sans",system-ui,sans-serif; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+  h1,h2,h3{font-family:var(--font-disp);font-weight:600;line-height:1.15;}
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:600;}
+  .callbar svg{width:19px;height:19px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+  .topbar{background:var(--slate);color:rgba(255,255,255,.8);font-size:.85rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 26px;flex-wrap:wrap;gap:8px;}
+  .topbar a{color:#fff;}
+  .topbar .tb-r{display:flex;gap:20px;}
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1160px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:11px;font-family:var(--font-disp);font-weight:600;font-size:1.2rem;}
+  .logo-m{width:36px;height:36px;border-radius:6px;background:var(--slate);display:grid;place-items:center;color:#fff;font-size:1rem;}
+  .nav-links{display:none;gap:30px;font-size:.95rem;font-weight:500;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--green);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .btn{font-family:var(--font-body);font-weight:600;border-radius:6px;padding:13px 24px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;transition:transform .2s,background .2s;font-size:.95rem;}
+  .btn svg{width:18px;height:18px;}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-green:hover{background:var(--green-deep);transform:translateY(-2px);}
+  .btn-green svg{fill:#fff;}
+  .btn-out{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .btn-out:hover{border-color:var(--green);color:var(--green);}
+  .nav .btn-green{padding:11px 20px;}
+  .hero{background:var(--mist);padding:70px 0;border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid;gap:46px;align-items:center;grid-template-columns:1fr;}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;}}
+  .tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;color:var(--green);padding:7px 15px;border-radius:6px;font-size:.83rem;font-weight:600;margin-bottom:24px;}
+  .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin-bottom:20px;}
+  .hero p{font-size:1.12rem;color:var(--ink-soft);max-width:480px;margin-bottom:30px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;}
+  .hero-panel{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 24px 50px -30px rgba(29,43,42,.4);}
+  .hero-panel .ph{background:var(--slate);color:#fff;padding:20px 24px;font-family:var(--font-disp);font-weight:600;font-size:1.1rem;}
+  .hero-panel .pb{padding:8px 24px 20px;}
+  .hero-panel .r{display:flex;align-items:center;gap:13px;padding:15px 0;border-bottom:1px solid var(--line);}
+  .hero-panel .r:last-child{border-bottom:none;}
+  .hero-panel .r svg{width:22px;height:22px;stroke:var(--green);fill:none;stroke-width:1.8;flex-shrink:0;}
+  .hero-panel .r b{font-weight:600;display:block;font-size:.96rem;}
+  .hero-panel .r span{font-size:.85rem;color:var(--ink-soft);}
+  section{padding:84px 0;}
+  .sec-head{max-width:580px;margin-bottom:48px;}
+  .sec-head.center{text-align:center;margin-left:auto;margin-right:auto;}
+  .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:14px;}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);}
+  .tabs{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  @media(min-width:840px){.tabs{grid-template-columns:300px 1fr;}}
+  .tab-list{display:flex;flex-direction:row;overflow-x:auto;border-bottom:1px solid var(--line);background:var(--mist);}
+  @media(min-width:840px){.tab-list{flex-direction:column;border-bottom:none;border-right:1px solid var(--line);overflow:visible;}}
+  .tab-btn{flex:0 0 auto;display:flex;align-items:center;gap:12px;padding:18px 22px;cursor:pointer;border:none;background:transparent;font-family:var(--font-body);font-size:.98rem;font-weight:500;color:var(--ink-soft);text-align:left;border-bottom:1px solid transparent;transition:background .2s,color .2s;white-space:nowrap;width:100%;}
+  @media(min-width:840px){.tab-btn{border-bottom:1px solid var(--line);}.tab-btn:last-child{border-bottom:none;}}
+  .tab-btn .ic{width:34px;height:34px;border-radius:7px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;}
+  .tab-btn .ic svg{width:18px;height:18px;stroke:var(--ink-soft);fill:none;stroke-width:1.6;transition:stroke .2s;}
+  .tab-btn:hover{background:rgba(31,138,112,.06);color:var(--ink);}
+  .tab-btn.active{background:#fff;color:var(--green);font-weight:600;box-shadow:inset 3px 0 0 var(--green);}
+  .tab-btn.active .ic{background:var(--green);border-color:var(--green);}
+  .tab-btn.active .ic svg{stroke:#fff;}
+  .tab-panels{padding:38px 34px;background:#fff;}
+  .tab-panel{display:none;animation:fadein .35s ease;}
+  .tab-panel.active{display:block;}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .tab-panel .pn{font-family:var(--font-disp);color:var(--green);font-weight:600;font-size:.9rem;margin-bottom:10px;}
+  .tab-panel h3{font-size:1.7rem;margin-bottom:14px;}
+  .tab-panel p{color:var(--ink-soft);font-size:1.02rem;margin-bottom:22px;max-width:560px;}
+  .tab-panel ul{list-style:none;display:grid;gap:12px;}
+  .tab-panel ul li{display:flex;gap:11px;align-items:flex-start;font-size:.95rem;}
+  .tab-panel ul li svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px;}
+  .band{background:var(--slate);color:#fff;}
+  .band-grid{display:grid;gap:40px;grid-template-columns:1fr;align-items:center;}
+  @media(min-width:880px){.band-grid{grid-template-columns:1fr 1fr;gap:64px;}}
+  .band .kicker{color:var(--gold);}
+  .band h2{color:#fff;}
+  .band p{color:rgba(255,255,255,.78);margin-top:16px;}
+  .checks{list-style:none;}
+  .checks li{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .checks li svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0;}
+  .checks li b{display:block;font-weight:600;margin-bottom:2px;}
+  .checks li span{font-size:.9rem;color:rgba(255,255,255,.72);}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:#fff;padding:32px 20px;text-align:center;}
+  .stat .v{font-family:var(--font-disp);font-weight:600;font-size:clamp(2.2rem,5vw,3.2rem);color:var(--green);line-height:1;}
+  .stat .l{font-size:.86rem;color:var(--ink-soft);margin-top:8px;}
+  .rev-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{border:1px solid var(--line);border-radius:10px;padding:28px;border-top:3px solid var(--green);}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px;}
+  .rev p{margin-bottom:16px;color:var(--ink);}
+  .rev .who{font-weight:600;font-size:.93rem;}
+  .rev .who span{display:block;color:var(--ink-soft);font-size:.83rem;font-weight:400;}
+  .final{background:var(--mist);}
+  .final-inner{display:grid;gap:24px;align-items:center;grid-template-columns:1fr;text-align:center;}
+  @media(min-width:760px){.final-inner{grid-template-columns:1fr auto;text-align:left;}}
+  .final h2{font-size:clamp(1.9rem,4vw,2.8rem);}
+  .final p{color:var(--ink-soft);margin-top:10px;}
+  footer{background:var(--slate);color:rgba(255,255,255,.65);padding:46px 0 110px;font-size:.88rem;}
+  @media(min-width:860px){footer{padding-bottom:46px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;}
+  .foot .logo{color:#fff;}
+  .reveal{opacity:0;transform:translateY(20px);transition:.7s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+12145550150" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call (214) 555-0150</a>
+<div class="topbar"><div class="wrap"><div>Serving Dallas–Fort Worth since 2007</div><div class="tb-r"><span>Mon–Sun · 24/7 Emergency</span><a href="tel:+12145550150">(214) 555-0150</a></div></div></div>
+<header class="nav"><div class="nav-inner"><a href="#" class="logo"><span class="logo-m">M</span> Meridian Air Systems</a><nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a></nav><a href="tel:+12145550150" class="btn btn-green">Request Service</a></div></header>
+<section class="hero"><div class="wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="tag"><span class="dot"></span> Licensed · Insured · NATE-Certified</span>
+      <h1>Professional HVAC for homes &amp; businesses.</h1>
+      <p>Meridian delivers dependable repair, installation, and maintenance contracts across the metroplex — on schedule and on budget.</p>
+      <div class="hero-cta">
+        <a href="tel:+12145550150" class="btn btn-green"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0150</a>
+        <a href="#services" class="btn btn-out">View services</a>
+      </div>
+    </div>
+    <div class="hero-panel reveal">
+      <div class="ph">Why clients choose Meridian</div>
+      <div class="pb">
+        <div class="r"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><div><b>Fully licensed &amp; insured</b><span>TACLB-certified technicians</span></div></div>
+        <div class="r"><svg viewBox="0 0 24 24"><path d="M3 12l3-9h12l3 9M5 12v7h14v-7"/></svg><div><b>Transparent, written quotes</b><span>Approved before work begins</span></div></div>
+        <div class="r"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><div><b>Maintenance agreements</b><span>Priority scheduling for members</span></div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Our services</div><h2>A full-service HVAC contractor</h2></div>
+  <div class="tabs">
+    <div class="tab-list" role="tablist">
+      <button class="tab-btn active" data-tab="t1"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9.5 2v4M14.5 2v4M5 8h14v11a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg></span> Repair &amp; Diagnostics</button>
+      <button class="tab-btn" data-tab="t2"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></span> System Installation</button>
+      <button class="tab-btn" data-tab="t3"><span class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6.3 6.3 1.4 1.4 6.3-6.3a4 4 0 005.4-5.4z"/></svg></span> Heating Systems</button>
+      <button class="tab-btn" data-tab="t4"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span> Maintenance Contracts</button>
+      <button class="tab-btn" data-tab="t5"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></span> Indoor Air Quality</button>
+      <button class="tab-btn" data-tab="t6"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span> Commercial Service</button>
+    </div>
+    <div class="tab-panels">
+      <div class="tab-panel active" id="t1"><div class="pn">01 / Service</div><h3>Repair &amp; Diagnostics</h3><p>Systematic troubleshooting that finds the true cause, not just the symptom — with same-day resolution on most calls.</p><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Full-system diagnostic with written findings</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Upfront repair quote before work begins</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Most repairs completed same day</li></ul></div>
+      <div class="tab-panel" id="t2"><div class="pn">02 / Service</div><h3>System Installation</h3><p>Load-calculated, code-compliant installations matched to your space, backed by full manufacturer warranties.</p><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Manual-J load calculation for correct sizing</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> High-efficiency options with financing</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Permitting and inspection handled for you</li></ul></div>
+      <div class="tab-panel" id="t3"><div class="pn">03 / Service</div><h3>Heating Systems</h3><p>Furnace, heat-pump, and boiler service that keeps performance reliable through every North Texas cold snap.</p><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Furnace and heat-pump repair</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Safety and carbon-monoxide checks</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Efficiency tuning to cut energy bills</li></ul></div>
+      <div class="tab-panel" id="t4"><div class="pn">04 / Service</div><h3>Maintenance Contracts</h3><p>Scheduled preventive service that protects your equipment, preserves warranties, and prioritizes your calls.</p><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Two seasonal tune-ups per year</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Priority scheduling for members</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Discounted repairs and no overtime fees</li></ul></div>
+      <div class="tab-panel" id="t5"><div class="pn">05 / Service</div><h3>Indoor Air Quality</h3><p>Filtration, ventilation, and humidity solutions that make indoor spaces measurably healthier and more comfortable.</p><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> High-MERV and HEPA filtration</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Whole-home humidity control</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Duct cleaning and sealing</li></ul></div>
+      <div class="tab-panel" id="t6"><div class="pn">06 / Service</div><h3>Commercial Service</h3><p>Rooftop units and light-commercial systems kept running with minimal disruption to your operations.</p><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Rooftop and split-system service</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Planned-maintenance agreements</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> After-hours work to avoid downtime</li></ul></div>
+    </div>
+  </div>
+</div></section>
+<section id="why" class="band"><div class="wrap">
+  <div class="band-grid">
+    <div class="reveal">
+      <div class="kicker">The Meridian standard</div>
+      <h2>Built on reliability and trust</h2>
+      <p>For nearly two decades, DFW homeowners and facility managers have relied on Meridian for work that's done correctly, documented clearly, and backed by a guarantee.</p>
+    </div>
+    <ul class="checks reveal">
+      <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Upfront, written pricing</b><span>Every quote approved before work starts — no surprises.</span></div></li>
+      <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Certified technicians</b><span>Background-checked, NATE-certified, and uniformed.</span></div></li>
+      <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Workmanship guarantee</b><span>If a repair doesn't hold, we return and make it right.</span></div></li>
+    </ul>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <div class="sec-head center reveal"><div class="kicker">By the numbers</div><h2>A track record that speaks</h2></div>
+  <div class="stats">
+    <div class="stat reveal"><div class="v">18</div><div class="l">Years in business</div></div>
+    <div class="stat reveal"><div class="v">14k+</div><div class="l">Service calls</div></div>
+    <div class="stat reveal"><div class="v">4.9★</div><div class="l">Average rating</div></div>
+    <div class="stat reveal"><div class="v">24/7</div><div class="l">Emergency response</div></div>
+  </div>
+</div></section>
+<section id="reviews" style="background:var(--mist);"><div class="wrap">
+  <div class="sec-head center reveal"><div class="kicker">Client feedback</div><h2>What clients say</h2></div>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Professional from quote to completion. The written estimate matched the final invoice exactly."</p><div class="who">Marcus T.<span>Las Colinas, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"We put all three of our properties on a maintenance contract. Response time has been excellent."</p><div class="who">Denise R.<span>Arlington, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Knowledgeable, punctual, and tidy. Exactly what you want from a contractor."</p><div class="who">The Walkers<span>Grand Prairie, TX</span></div></div>
+  </div>
+</div></section>
+<section class="final"><div class="wrap"><div class="final-inner reveal">
+  <div><h2>Request service today.</h2><p>Speak with our dispatch team and get on the schedule — often the same day.</p></div>
+  <a href="tel:+12145550150" class="btn btn-green"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0150</a>
+</div></div></section>
+<footer><div class="wrap foot"><div class="logo"><span class="logo-m">M</span> Meridian Air Systems</div><div>Licensed &amp; Insured · TACLB#00000 · NATE-Certified</div><div>© 2026 · Sample Site</div></div></footer>
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn=>{btn.addEventListener('click',()=>{const id=btn.dataset.tab;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(id).classList.add('active');});});
+const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>

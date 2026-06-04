@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltair HVAC — Fast, Modern Climate Service in Dallas</title>
+<meta name="description" content="Voltair HVAC: fast, modern HVAC repair, installation, and maintenance across Dallas-Fort Worth. Same-day service. Call (214) 555-0199.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HVACBusiness","name":"Voltair HVAC","telephone":"+1-214-555-0199","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75201","addressCountry":"US"},"areaServed":["Dallas","Plano","Carrollton","Addison","Richardson"],"openingHours":"Mo-Su 00:00-23:59","priceRange":"$$"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a0b1e; --paper:#fff6f2;
+    --coral:#ff4d3d; --magenta:#e6157a; --tang:#ff8a3d; --cyan:#00d6c2; --plum:#2a0f33;
+    --ink-soft:#6e5560; --line:rgba(42,15,51,.12);
+    --grad:linear-gradient(105deg,var(--tang),var(--coral) 40%,var(--magenta));
+    --font-disp:"Bricolage Grotesque",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px;}
+  h1,h2,h3{font-family:var(--font-disp);font-weight:800;line-height:.98;letter-spacing:-.03em;}
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:600;}
+  .callbar svg{width:19px;height:19px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(255,246,242,.82);backdrop-filter:blur(12px);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-disp);font-weight:800;font-size:1.4rem;letter-spacing:-.04em;}
+  .logo-m{width:34px;height:34px;border-radius:10px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:1rem;}
+  .nav-links{display:none;gap:30px;font-size:.95rem;font-weight:500;}
+  .nav-links a:hover{color:var(--magenta);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .btn{font-weight:600;border-radius:100px;padding:14px 26px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,filter .2s;font-size:.97rem;font-family:var(--font-body);}
+  .btn svg{width:18px;height:18px;}
+  .btn-grad{background:var(--grad);color:#fff;box-shadow:0 12px 30px -8px rgba(230,21,122,.5);}
+  .btn-grad:hover{transform:translateY(-3px);box-shadow:0 18px 40px -8px rgba(230,21,122,.65);}
+  .btn-grad svg{fill:#fff;}
+  .btn-ink{background:var(--ink);color:#fff;}
+  .btn-ink:hover{transform:translateY(-3px);}
+  .btn-ink svg{fill:var(--cyan);}
+  .btn-cyan{background:var(--cyan);color:var(--plum);}
+  .btn-cyan svg{fill:var(--plum);}
+  .nav .btn-grad{padding:11px 22px;}
+  .hero{padding:50px 0 70px;position:relative;}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:stretch;}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.25fr .75fr;gap:30px;}}
+  .hero-left{display:flex;flex-direction:column;justify-content:center;}
+  .tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--ink);color:#fff;padding:8px 16px;border-radius:100px;font-weight:600;font-size:.82rem;margin-bottom:24px;}
+  .tag .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
+  .hero h1{font-size:clamp(3.2rem,9vw,7rem);margin-bottom:20px;}
+  .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero p{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--ink-soft);max-width:480px;margin-bottom:30px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;}
+  .hero-panel{background:var(--grad);border-radius:26px;padding:34px;color:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;min-height:330px;}
+  .hero-panel::before{content:"";position:absolute;top:-40px;right:-40px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.16);}
+  .hero-panel::after{content:"";position:absolute;bottom:-60px;left:-30px;width:150px;height:150px;border-radius:50%;background:var(--cyan);opacity:.45;filter:blur(6px);}
+  .hero-panel .hp-top{position:relative;z-index:1;}
+  .hero-panel .hp-temp{font-family:var(--font-disp);font-weight:800;font-size:4rem;line-height:1;}
+  .hero-panel .hp-sub{opacity:.9;font-size:.96rem;margin-top:4px;}
+  .hero-panel .hp-stats{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
+  .hero-panel .hp-stat{background:rgba(255,255,255,.16);border-radius:14px;padding:14px 16px;backdrop-filter:blur(4px);}
+  .hero-panel .hp-stat .v{font-family:var(--font-disp);font-weight:700;font-size:1.5rem;line-height:1;}
+  .hero-panel .hp-stat .l{font-size:.78rem;opacity:.9;margin-top:4px;}
+  .strip{background:var(--ink);color:var(--paper);overflow:hidden;}
+  .strip div{display:flex;white-space:nowrap;gap:0;font-family:var(--font-disp);font-weight:700;font-size:1.15rem;padding:13px 0;animation:scroll 24s linear infinite;}
+  .strip span{display:inline-flex;align-items:center;}
+  .strip span i{font-style:normal;padding:0 26px;}
+  .strip span b{color:var(--cyan);font-weight:700;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  section{padding:84px 0;}
+  .sec-head{margin-bottom:44px;max-width:640px;}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--magenta);margin-bottom:16px;}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--grad);}
+  .sec-head h2{font-size:clamp(2.4rem,6vw,4rem);}
+  .sec-head h2 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .acc{display:flex;flex-direction:column;gap:14px;}
+  .acc-item{border-radius:20px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:box-shadow .3s;}
+  .acc-item.open{box-shadow:0 26px 50px -28px rgba(230,21,122,.45);}
+  .acc-head{display:flex;align-items:center;gap:18px;padding:24px 26px;cursor:pointer;}
+  .acc-num{font-family:var(--font-disp);font-weight:800;font-size:1.1rem;color:var(--magenta);min-width:34px;}
+  .acc-ic{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,rgba(255,138,61,.18),rgba(230,21,122,.16));display:grid;place-items:center;flex-shrink:0;}
+  .acc-ic svg{width:25px;height:25px;stroke:var(--coral);fill:none;stroke-width:1.8;}
+  .acc-head h3{font-size:1.45rem;flex:1;}
+  .acc-toggle{width:34px;height:34px;border-radius:50%;background:var(--paper);display:grid;place-items:center;flex-shrink:0;transition:background .3s,transform .3s;position:relative;}
+  .acc-toggle::before,.acc-toggle::after{content:"";position:absolute;background:var(--ink);border-radius:2px;transition:opacity .3s,background .3s;}
+  .acc-toggle::before{width:14px;height:2px;}
+  .acc-toggle::after{width:2px;height:14px;}
+  .acc-item.open .acc-toggle{background:var(--grad);}
+  .acc-item.open .acc-toggle::before,.acc-item.open .acc-toggle::after{background:#fff;}
+  .acc-item.open .acc-toggle::after{opacity:0;}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .acc-body .inner{padding:0 26px 26px 78px;color:var(--ink-soft);font-size:1.02rem;}
+  @media(max-width:560px){.acc-body .inner{padding-left:26px;}}
+  .acc-body .inner .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+  .acc-body .inner .meta span{background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:7px 15px;font-size:.83rem;font-weight:500;color:var(--ink);}
+  .band{background:var(--plum);color:var(--paper);}
+  .band .kicker{color:var(--cyan);}
+  .band .kicker::before{background:var(--cyan);}
+  .band h2{color:#fff;}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:42px;}
+  @media(min-width:820px){.stats{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px;}
+  .stat .v{font-family:var(--font-disp);font-weight:800;font-size:clamp(2.6rem,6vw,3.8rem);line-height:1;background:linear-gradient(120deg,var(--tang),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .stat .l{font-size:.86rem;color:rgba(255,246,242,.72);margin-top:10px;}
+  .rev-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;position:relative;}
+  .rev::before{content:"\201C";position:absolute;top:8px;right:22px;font-family:var(--font-disp);font-size:4rem;color:var(--coral);opacity:.18;line-height:1;}
+  .stars{color:var(--tang);letter-spacing:2px;margin-bottom:13px;}
+  .rev p{margin-bottom:15px;font-size:1.02rem;}
+  .rev .who{font-family:var(--font-disp);font-weight:700;}
+  .rev .who span{display:block;color:var(--ink-soft);font-size:.84rem;font-weight:400;font-family:var(--font-body);}
+  .final{padding-bottom:84px;}
+  .final-card{background:var(--grad);color:#fff;border-radius:30px;padding:74px 30px;text-align:center;position:relative;overflow:hidden;}
+  .final-card::before{content:"";position:absolute;top:-50px;right:-30px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.14);}
+  .final-card::after{content:"";position:absolute;bottom:-70px;left:-40px;width:240px;height:240px;border-radius:50%;background:var(--cyan);opacity:.4;filter:blur(8px);}
+  .final h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:16px;position:relative;}
+  .final p{max-width:440px;margin:0 auto 30px;opacity:.92;position:relative;font-size:1.1rem;}
+  .final .btn-cyan{position:relative;}
+  footer{background:var(--plum);color:rgba(255,246,242,.6);padding:46px 0 110px;font-size:.88rem;}
+  @media(min-width:860px){footer{padding-bottom:46px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;}
+  .foot .logo{color:#fff;}
+  .reveal{opacity:0;transform:translateY(22px);transition:.6s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+12145550199" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call (214) 555-0199</a>
+<header class="nav"><div class="nav-inner"><a href="#" class="logo"><span class="logo-m">⚡</span> Voltair</a><nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a></nav><a href="tel:+12145550199" class="btn btn-grad">Call Now</a></div></header>
+<section class="hero"><div class="wrap">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <span class="tag"><span class="dot"></span> Same-day service · 7 days a week</span>
+      <h1>Beat the <span class="g">heat</span> before it beats you.</h1>
+      <p>Modern HVAC service for Dallas-Fort Worth. Real humans, rapid response, and pricing you see before we start.</p>
+      <div class="hero-cta">
+        <a href="tel:+12145550199" class="btn btn-grad"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0199</a>
+        <a href="#services" class="btn btn-ink">See services</a>
+      </div>
+    </div>
+    <div class="hero-panel reveal">
+      <div class="hp-top">
+        <div class="hp-temp">101°</div>
+        <div class="hp-sub">Outside right now. Let's fix that.</div>
+      </div>
+      <div class="hp-stats">
+        <div class="hp-stat"><div class="v">90 min</div><div class="l">Avg arrival</div></div>
+        <div class="hp-stat"><div class="v">4.9★</div><div class="l">300+ reviews</div></div>
+        <div class="hp-stat"><div class="v">7 days</div><div class="l">A week</div></div>
+        <div class="hp-stat"><div class="v">$0</div><div class="l">Surprise fees</div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+<div class="strip"><div><span><i>Same-Day Service</i><b>✦</b><i>Licensed &amp; Insured</i><b>✦</b><i>Upfront Pricing</i><b>✦</b><i>24/7 Emergency</i><b>✦</b><i>4.9 Stars</i><b>✦</b></span><span><i>Same-Day Service</i><b>✦</b><i>Licensed &amp; Insured</i><b>✦</b><i>Upfront Pricing</i><b>✦</b><i>24/7 Emergency</i><b>✦</b><i>4.9 Stars</i><b>✦</b></span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">What we do</div><h2>Tap a service to <span class="g">dig in.</span></h2></div>
+  <div class="acc">
+    <div class="acc-item open"><div class="acc-head"><span class="acc-num">01</span><span class="acc-ic"><svg viewBox="0 0 24 24"><path d="M9.5 2v4M14.5 2v4M5 8h14v11a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg></span><h3>AC Repair</h3><span class="acc-toggle"></span></div><div class="acc-body"><div class="inner">Rapid diagnosis and same-day fixes that get you back to cool fast — most repairs done in a single visit, with the price shown before we lift a wrench.<div class="meta"><span>Same-day</span><span>Upfront quote</span><span>All brands</span></div></div></div></div>
+    <div class="acc-item"><div class="acc-head"><span class="acc-num">02</span><span class="acc-ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></span><h3>New Install</h3><span class="acc-toggle"></span></div><div class="acc-body"><div class="inner">Smart, high-efficiency systems sized right for your home, with instant financing so comfort never waits on the budget.<div class="meta"><span>Financing</span><span>Energy-efficient</span><span>Warrantied</span></div></div></div></div>
+    <div class="acc-item"><div class="acc-head"><span class="acc-num">03</span><span class="acc-ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6.3 6.3 1.4 1.4 6.3-6.3a4 4 0 005.4-5.4z"/></svg></span><h3>Heating</h3><span class="acc-toggle"></span></div><div class="acc-body"><div class="inner">Furnace and heat-pump service that keeps winter where it belongs — outside. Fast repairs and honest tune-ups.<div class="meta"><span>Furnace</span><span>Heat pump</span><span>Safety check</span></div></div></div></div>
+    <div class="acc-item"><div class="acc-head"><span class="acc-num">04</span><span class="acc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><h3>Maintenance</h3><span class="acc-toggle"></span></div><div class="acc-body"><div class="inner">Membership tune-ups that stop breakdowns before they start, plus priority scheduling and no overtime charges.<div class="meta"><span>2x yearly</span><span>Priority</span><span>No overtime</span></div></div></div></div>
+    <div class="acc-item"><div class="acc-head"><span class="acc-num">05</span><span class="acc-ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></span><h3>Air Quality</h3><span class="acc-toggle"></span></div><div class="acc-body"><div class="inner">Filtration, ventilation, and humidity control for fresher, cleaner indoor air your whole household can feel.<div class="meta"><span>Filtration</span><span>Humidity</span><span>Duct care</span></div></div></div></div>
+    <div class="acc-item"><div class="acc-head"><span class="acc-num">06</span><span class="acc-ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span><h3>Emergency</h3><span class="acc-toggle"></span></div><div class="acc-body"><div class="inner">24/7 response when the heat won't wait until morning. One call and a tech is on the way, day or night.<div class="meta"><span>24/7</span><span>After-hours</span><span>Live dispatch</span></div></div></div></div>
+  </div>
+</div></section>
+<section id="why" class="band"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Why Voltair</div><h2>Numbers that back it up.</h2></div>
+  <div class="stats">
+    <div class="stat reveal"><div class="v">10</div><div class="l">Years in DFW</div></div>
+    <div class="stat reveal"><div class="v">9k+</div><div class="l">Jobs done</div></div>
+    <div class="stat reveal"><div class="v">4.9★</div><div class="l">Average rating</div></div>
+    <div class="stat reveal"><div class="v">90m</div><div class="l">Avg arrival</div></div>
+  </div>
+</div></section>
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Reviews</div><h2>People are <span class="g">talking.</span></h2></div>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Booked online, tech showed in 40 minutes, fixed in one visit. Unreal speed."</p><div class="who">Marcus T.<span>Addison, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Loved seeing the price before they started. No games. Super modern operation."</p><div class="who">Denise R.<span>Carrollton, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"These folks are quick and sharp. Best HVAC experience I've had, hands down."</p><div class="who">The Walkers<span>Plano, TX</span></div></div>
+  </div>
+</div></section>
+<section class="final"><div class="wrap"><div class="final-card reveal">
+  <h2>Let's get you cool.</h2>
+  <p>One tap and a tech is on the way. No hold music, no runaround.</p>
+  <a href="tel:+12145550199" class="btn btn-cyan"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0199</a>
+</div></div></section>
+<footer><div class="wrap foot"><div class="logo"><span class="logo-m">⚡</span> Voltair HVAC</div><div>Licensed &amp; Insured · TACLB#00000</div><div>© 2026 · Sample Site</div></div></footer>
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{h.addEventListener('click',()=>{const item=h.parentElement;const open=item.classList.contains('open');document.querySelectorAll('.acc-item').forEach(i=>{i.classList.remove('open');i.querySelector('.acc-body').style.maxHeight=null;});if(!open){item.classList.add('open');const b=item.querySelector('.acc-body');b.style.maxHeight=b.scrollHeight+'px';}});});
+window.addEventListener('load',()=>{const o=document.querySelector('.acc-item.open .acc-body');if(o)o.style.maxHeight=o.scrollHeight+'px';});
+const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

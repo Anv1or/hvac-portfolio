@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Climate Co. — Premium HVAC Service in Dallas</title>
+<meta name="description" content="Apex Climate Co. delivers premium HVAC repair, installation, and maintenance across Dallas–Fort Worth. Same-day service. Call (214) 555-0177.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HVACBusiness","name":"Apex Climate Co.","telephone":"+1-214-555-0177","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75201","addressCountry":"US"},"areaServed":["Dallas","Plano","Frisco","Southlake","Highland Park"],"openingHours":"Mo-Su 00:00-23:59","priceRange":"$$$"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0b1012; --bg2:#0f1619; --card:rgba(255,255,255,.04); --ink:#e8eef0; --ink-soft:#9aa9ad; --teal:#2dd4bf; --teal-deep:#0d9488; --amber:#f5b342; --line:rgba(255,255,255,.09); --font-disp:"Syne",sans-serif; --font-body:"Sora",system-ui,sans-serif; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px;}
+  h1,h2,h3{font-family:var(--font-disp);font-weight:700;line-height:1.05;letter-spacing:-.02em;}
+  .glow{position:fixed;border-radius:50%;filter:blur(110px);opacity:.5;z-index:0;pointer-events:none;}
+  .glow1{width:480px;height:480px;background:var(--teal-deep);top:-180px;right:-120px;}
+  .glow2{width:420px;height:420px;background:#7a4d12;bottom:-160px;left:-140px;opacity:.35;}
+  .callbar{position:fixed;bottom:16px;left:16px;right:16px;z-index:90;background:var(--teal);color:#04201c;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;font-weight:600;box-shadow:0 14px 40px -10px rgba(45,212,191,.5);}
+  .callbar svg{width:19px;height:19px;fill:#04201c;}
+  @media(min-width:860px){.callbar{display:none;}}
+  header.nav{position:sticky;top:0;z-index:80;backdrop-filter:blur(14px);background:rgba(11,16,18,.65);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1140px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-disp);font-weight:800;font-size:1.2rem;}
+  .logo-m{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));display:grid;place-items:center;color:#04201c;font-size:.95rem;box-shadow:0 0 20px rgba(45,212,191,.5);}
+  .nav-links{display:none;gap:32px;font-size:.95rem;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--teal);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .btn{font-family:var(--font-body);font-weight:600;border-radius:11px;padding:14px 24px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;transition:transform .25s,box-shadow .25s,background .25s;font-size:.96rem;}
+  .btn svg{width:18px;height:18px;}
+  .btn-teal{background:var(--teal);color:#04201c;box-shadow:0 0 30px -6px rgba(45,212,191,.55);}
+  .btn-teal:hover{transform:translateY(-2px);box-shadow:0 0 40px -4px rgba(45,212,191,.8);}
+  .btn-teal svg{fill:#04201c;}
+  .btn-ghost{background:var(--card);color:var(--ink);border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--teal);}
+  .nav .btn-teal{padding:11px 20px;}
+  section{position:relative;z-index:1;padding:90px 0;}
+  .hero{padding:100px 0 70px;text-align:center;}
+  .tag{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;color:var(--teal);background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.25);padding:7px 16px;border-radius:100px;margin-bottom:30px;}
+  .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal);}
+  .hero h1{font-size:clamp(2.8rem,7.5vw,5.6rem);margin-bottom:24px;}
+  .hero h1 .g{background:linear-gradient(120deg,var(--teal),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero p{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-soft);max-width:560px;margin:0 auto 36px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;}
+  .chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:48px;}
+  .chip{display:flex;align-items:center;gap:9px;font-size:.88rem;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);border-radius:100px;padding:10px 18px;}
+  .chip svg{width:17px;height:17px;stroke:var(--teal);fill:none;stroke-width:1.8;}
+  .sec-head{text-align:center;max-width:560px;margin:0 auto 54px;}
+  .kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;font-weight:600;}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3.1rem);}
+  .scroller-wrap{position:relative;}
+  .scroller{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 22px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--teal-deep) transparent;}
+  .scroller::-webkit-scrollbar{height:6px;}
+  .scroller::-webkit-scrollbar-thumb{background:var(--teal-deep);border-radius:10px;}
+  .scroller::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:10px;}
+  .scard{scroll-snap-align:start;flex:0 0 78%;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px;transition:border-color .3s,background .3s;position:relative;}
+  @media(min-width:600px){.scard{flex-basis:46%;}}
+  @media(min-width:960px){.scard{flex-basis:31%;}}
+  .scard:hover{border-color:rgba(45,212,191,.4);background:rgba(45,212,191,.05);}
+  .scard .no{position:absolute;top:26px;right:30px;font-family:var(--font-disp);font-weight:800;font-size:1.4rem;color:rgba(255,255,255,.12);}
+  .scard .ic{width:54px;height:54px;border-radius:14px;background:rgba(45,212,191,.12);display:grid;place-items:center;margin-bottom:46px;}
+  .scard .ic svg{width:28px;height:28px;stroke:var(--teal);fill:none;stroke-width:1.6;}
+  .scard h3{font-size:1.35rem;font-weight:700;margin-bottom:11px;}
+  .scard p{color:var(--ink-soft);font-size:.96rem;}
+  .scroll-hint{display:flex;align-items:center;gap:10px;color:var(--ink-soft);font-size:.85rem;margin-top:4px;}
+  .scroll-hint svg{width:18px;height:18px;stroke:var(--teal);fill:none;stroke-width:2;}
+  .scroll-hint .track{flex:1;height:2px;background:rgba(255,255,255,.1);border-radius:2px;position:relative;overflow:hidden;max-width:160px;}
+  .scroll-hint .track::after{content:"";position:absolute;left:0;top:0;height:100%;width:38%;background:var(--teal);border-radius:2px;animation:slidehint 2.6s ease-in-out infinite;}
+  @keyframes slidehint{0%,100%{left:0;}50%{left:62%;}}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(min-width:820px){.stats{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;}
+  .stat .v{font-family:var(--font-disp);font-weight:800;font-size:clamp(2.4rem,5vw,3.4rem);background:linear-gradient(120deg,var(--teal),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;}
+  .stat .l{color:var(--ink-soft);font-size:.86rem;margin-top:10px;}
+  .rev-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;}
+  .stars{color:var(--amber);letter-spacing:2px;margin-bottom:14px;}
+  .rev p{font-size:1.02rem;margin-bottom:16px;color:var(--ink);}
+  .rev .who{font-weight:600;font-size:.92rem;}
+  .rev .who span{display:block;color:var(--ink-faint,#7d8b8f);font-size:.82rem;font-weight:300;color:var(--ink-soft);}
+  .final{text-align:center;}
+  .final-card{background:linear-gradient(135deg,rgba(45,212,191,.12),rgba(245,179,66,.08));border:1px solid var(--line);border-radius:26px;padding:70px 30px;position:relative;overflow:hidden;}
+  .final h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:16px;}
+  .final p{color:var(--ink-soft);max-width:440px;margin:0 auto 32px;}
+  footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:46px 0 110px;color:var(--ink-soft);font-size:.88rem;}
+  @media(min-width:860px){footer{padding-bottom:46px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;}
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<div class="glow glow1"></div><div class="glow glow2"></div>
+<a href="tel:+12145550177" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call (214) 555-0177</a>
+<header class="nav"><div class="nav-inner"><a href="#" class="logo"><span class="logo-m">◆</span> Apex Climate</a><nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Apex</a><a href="#reviews">Reviews</a></nav><a href="tel:+12145550177" class="btn btn-teal">Call Now</a></div></header>
+<section class="hero"><div class="wrap">
+  <span class="tag"><span class="dot"></span> Premium comfort · Same-day service</span>
+  <h1>Your home, <span class="g">perfectly tempered</span>.</h1>
+  <p>White-glove HVAC repair, installation, and maintenance for Dallas–Fort Worth homes that don't settle. Licensed, insured, and a call away.</p>
+  <div class="hero-cta">
+    <a href="tel:+12145550177" class="btn btn-teal"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0177</a>
+    <a href="#services" class="btn btn-ghost">Explore services</a>
+  </div>
+  <div class="chips">
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Licensed &amp; Insured</div>
+    <div class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Under 2-hr arrival</div>
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>4.9★ · 300+ reviews</div>
+  </div>
+</div></section>
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal" style="text-align:left;margin-left:0;"><div class="kicker">What we do</div><h2>Comfort, engineered</h2></div>
+  <div class="scroller-wrap">
+    <div class="scroller">
+      <div class="scard reveal"><span class="no">01</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M9.5 2v4M14.5 2v4M5 8h14v11a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg></div><h3>AC Repair</h3><p>Precision diagnostics and same-day repair that fixes the root cause, not just the symptom.</p></div>
+      <div class="scard reveal"><span class="no">02</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div><h3>System Install</h3><p>High-efficiency systems, expertly sized and installed, with financing built in.</p></div>
+      <div class="scard reveal"><span class="no">03</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6.3 6.3 1.4 1.4 6.3-6.3a4 4 0 005.4-5.4z"/></svg></div><h3>Heating</h3><p>Furnace and heat-pump care to keep every room warm through winter.</p></div>
+      <div class="scard reveal"><span class="no">04</span><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Maintenance</h3><p>Priority membership with seasonal tune-ups and no overtime charges.</p></div>
+      <div class="scard reveal"><span class="no">05</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div><h3>Air Quality</h3><p>Advanced filtration and humidity control for cleaner indoor air.</p></div>
+      <div class="scard reveal"><span class="no">06</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>24/7 Emergency</h3><p>Around-the-clock response when comfort can't wait until morning.</p></div>
+    </div>
+    <div class="scroll-hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Scroll to explore <span class="track"></span></div>
+  </div>
+</div></section>
+<section id="why"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Why Apex</div><h2>A standard you can feel</h2></div>
+  <div class="stats">
+    <div class="stat reveal"><div class="v">20</div><div class="l">Years of expertise</div></div>
+    <div class="stat reveal"><div class="v">15k+</div><div class="l">Systems serviced</div></div>
+    <div class="stat reveal"><div class="v">4.9★</div><div class="l">Average rating</div></div>
+    <div class="stat reveal"><div class="v">100%</div><div class="l">Satisfaction guarantee</div></div>
+  </div>
+</div></section>
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Real customers</div><h2>Trusted across DFW</h2></div>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Immaculate work, on time, and they treated my house like their own. Premium in every sense."</p><div class="who">Marcus T.<span>Frisco, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"The membership pays for itself. Two years, not a single surprise breakdown."</p><div class="who">Denise R.<span>Southlake, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Quoted fairly, finished early, and the new system is whisper quiet. Couldn't be happier."</p><div class="who">The Walkers<span>Highland Park, TX</span></div></div>
+  </div>
+</div></section>
+<section class="final"><div class="wrap"><div class="final-card reveal">
+  <h2>Comfort is one call away.</h2>
+  <p>Join the DFW homeowners who never worry about their HVAC again.</p>
+  <a href="tel:+12145550177" class="btn btn-teal"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0177</a>
+</div></div></section>
+<footer><div class="wrap foot"><div class="logo"><span class="logo-m">◆</span> Apex Climate Co.</div><div>Licensed &amp; Insured · TACLB#00000</div><div>© 2026 · Sample Site</div></div></footer>
+<script>const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>
