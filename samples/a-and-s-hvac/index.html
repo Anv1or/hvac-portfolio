@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A and S HVAC Services | Fast, Reliable AC Repair in DFW</title>
+<meta name="description" content="A and S HVAC Services: fast, reliable AC repair across Dallas-Fort Worth. Licensed and insured, all brands serviced. Call or text (682) 529-4634.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HVACBusiness","name":"A and S HVAC Services LLC","telephone":"+1-682-529-4634","email":"israelamaya@anshvac.work","address":{"@type":"PostalAddress","addressRegion":"TX","addressCountry":"US"},"areaServed":"Dallas-Fort Worth and surrounding areas","openingHours":"Mo-Su 00:00-23:59","priceRange":"$$","description":"Fast, reliable AC repair across the Dallas-Fort Worth metroplex. Licensed and insured, all brands serviced, same-day service available."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#10182f;--navy-2:#16203c;--navy-card:#1b2748;--ink:#eaf0ff;--ink-soft:#9fb0d0;
+    --orange:#f5912a;--orange-deep:#e07816;--blue:#4d8fd6;--blue-soft:#6ba6e6;
+    --line:rgba(255,255,255,.10);--line-2:rgba(255,255,255,.06);
+    --disp:"Oswald",sans-serif;--body:"Outfit",system-ui,sans-serif;
+    --sidebar:300px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);background:var(--navy);color:var(--ink);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;}
+  a{color:inherit;text-decoration:none;}
+ 
+  /* sample banner spans full width */
+  .sample-banner{background:var(--orange);color:var(--navy);text-align:center;padding:9px 16px;font-size:.85rem;font-weight:600;}
+ 
+  /* ===== fixed left sidebar (desktop) ===== */
+  .sidebar{position:fixed;top:0;left:0;width:var(--sidebar);height:100vh;background:var(--navy-2);border-right:1px solid var(--line);padding:38px 32px;display:flex;flex-direction:column;z-index:50;}
+  .sb-logo{display:flex;align-items:center;gap:13px;margin-bottom:40px;}
+  .sb-logo .mk{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 60% 40%,var(--orange),var(--orange-deep));display:grid;place-items:center;flex-shrink:0;position:relative;}
+  .sb-logo .mk::before{content:"";position:absolute;left:9px;top:10px;width:15px;height:15px;border-radius:50%;background:var(--blue);opacity:.8;}
+  .sb-logo .mk svg{width:24px;height:24px;fill:var(--navy);position:relative;}
+  .sb-logo b{font-family:var(--disp);font-weight:700;font-size:1.15rem;display:block;line-height:1;}
+  .sb-logo .sub{color:var(--blue-soft);font-weight:500;letter-spacing:.22em;font-size:.6rem;}
+  .sb-nav{display:flex;flex-direction:column;gap:4px;margin-bottom:auto;}
+  .sb-nav a{font-family:var(--disp);text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;color:var(--ink-soft);padding:11px 0;border-bottom:1px solid var(--line-2);transition:color .2s,padding-left .2s;}
+  .sb-nav a:hover{color:var(--orange);padding-left:8px;}
+  .sb-contact{margin-top:32px;}
+  .sb-contact .lbl{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;}
+  .sb-phone{font-family:var(--disp);font-weight:700;font-size:1.5rem;color:var(--orange);display:block;margin-bottom:14px;}
+  .sb-call{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--orange);color:var(--navy);font-weight:600;border-radius:10px;padding:14px;width:100%;transition:background .2s,transform .2s;}
+  .sb-call:hover{background:var(--orange-deep);transform:translateY(-2px);}
+  .sb-call svg{width:18px;height:18px;fill:var(--navy);}
+  .sb-tagline{margin-top:22px;font-size:.82rem;color:var(--ink-soft);font-style:italic;}
+ 
+  /* ===== main content offset by sidebar ===== */
+  .main{margin-left:var(--sidebar);}
+  .inner{max-width:860px;padding:0 48px;}
+  @media(max-width:900px){
+    .sidebar{position:static;width:auto;height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:16px 22px;border-right:none;border-bottom:1px solid var(--line);position:sticky;top:0;backdrop-filter:blur(12px);background:rgba(22,32,60,.92);}
+    .sb-logo{margin-bottom:0;}
+    .sb-nav{display:none;}
+    .sb-contact{margin-top:0;}
+    .sb-contact .lbl,.sb-phone,.sb-tagline{display:none;}
+    .sb-call{width:auto;padding:11px 18px;}
+    .main{margin-left:0;}
+    .inner{padding:0 24px;}
+  }
+ 
+  /* mobile sticky call */
+  .callbar{display:none;position:fixed;bottom:16px;left:16px;right:16px;z-index:90;background:var(--orange);color:var(--navy);border-radius:14px;align-items:center;justify-content:center;gap:10px;padding:16px;font-weight:700;box-shadow:0 16px 40px -12px rgba(245,145,42,.6);}
+  .callbar svg{width:19px;height:19px;fill:var(--navy);}
+  @media(max-width:900px){.callbar{display:flex;}}
+ 
+  /* ===== hero: big asymmetric type block ===== */
+  .hero{padding:90px 0 60px;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;top:40px;right:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(245,145,42,.16),transparent 70%);}
+  .hero .inner{position:relative;z-index:1;}
+  .hero .eyebrow{font-family:var(--disp);text-transform:uppercase;letter-spacing:.16em;color:var(--orange);font-size:.85rem;margin-bottom:20px;}
+  .hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(3rem,8vw,5.8rem);line-height:.95;margin-bottom:24px;}
+  .hero h1 .cool{color:var(--blue-soft);}
+  .hero h1 .hot{color:var(--orange);}
+  .hero p{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--ink-soft);max-width:520px;}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;}
+  .hero .meta span{display:inline-flex;align-items:center;gap:9px;font-size:.92rem;color:var(--ink-soft);}
+  .hero .meta svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:2;}
+ 
+  /* section scaffolding (left-aligned, asymmetric) */
+  section{padding:64px 0;border-top:1px solid var(--line-2);}
+  .eyebrow2{font-family:var(--disp);text-transform:uppercase;letter-spacing:.16em;color:var(--blue-soft);font-size:.82rem;margin-bottom:14px;}
+  .sec-h{font-family:var(--disp);font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase;margin-bottom:36px;}
+  .sec-h .o{color:var(--orange);}
+ 
+  /* ===== specials: horizontal ticket strip ===== */
+  .ticket{display:flex;align-items:stretch;background:var(--navy-card);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:12px;margin-bottom:14px;overflow:hidden;transition:transform .25s,border-color .25s;}
+  .ticket:hover{transform:translateX(6px);border-left-color:var(--blue);}
+  .ticket .tk-price{flex-shrink:0;width:130px;background:rgba(245,145,42,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 10px;}
+  .ticket .tk-price .p{font-family:var(--disp);font-weight:700;font-size:1.9rem;color:var(--orange);line-height:1;}
+  .ticket .tk-price .r{font-size:.72rem;color:var(--ink-soft);margin-top:5px;text-align:center;}
+  .ticket .tk-body{padding:20px 24px;display:flex;flex-direction:column;justify-content:center;}
+  .ticket .tk-body h3{font-size:1.2rem;margin-bottom:5px;}
+  .ticket .tk-body p{color:var(--ink-soft);font-size:.9rem;}
+  .free-opinion{margin-top:18px;background:linear-gradient(100deg,rgba(77,143,214,.14),transparent);border:1px dashed var(--blue);border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:14px;}
+  .free-opinion svg{width:30px;height:30px;stroke:var(--blue-soft);fill:none;stroke-width:1.7;flex-shrink:0;}
+  .free-opinion b{color:var(--blue-soft);}
+  .sp-note{color:var(--ink-soft);font-size:.82rem;margin-top:16px;}
+ 
+  /* ===== services: numbered inline rows ===== */
+  .svc-row{display:flex;align-items:flex-start;gap:20px;padding:22px 0;border-bottom:1px solid var(--line-2);}
+  .svc-row:last-child{border-bottom:none;}
+  .svc-row .num{font-family:var(--disp);font-weight:700;font-size:1.4rem;color:var(--orange);min-width:42px;}
+  .svc-row .txt h3{font-size:1.25rem;margin-bottom:5px;}
+  .svc-row .txt p{color:var(--ink-soft);font-size:.95rem;}
+ 
+  /* ===== why: inline chips ===== */
+  .why-row{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media(min-width:600px){.why-row{grid-template-columns:1fr 1fr;}}
+  .why-chip{display:flex;align-items:center;gap:16px;background:var(--navy-2);border:1px solid var(--line-2);border-radius:12px;padding:20px 22px;}
+  .why-chip .ic{width:46px;height:46px;border-radius:11px;background:rgba(245,145,42,.12);display:grid;place-items:center;flex-shrink:0;}
+  .why-chip .ic svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;}
+  .why-chip b{font-family:var(--disp);text-transform:uppercase;font-size:1rem;font-weight:600;display:block;letter-spacing:.02em;}
+  .why-chip span{color:var(--ink-soft);font-size:.88rem;}
+ 
+  /* reviews */
+  .rev-note{font-size:.82rem;color:var(--ink-soft);background:var(--navy-2);border:1px solid var(--line-2);border-radius:8px;padding:11px 16px;margin-bottom:22px;}
+  .rev-row{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:680px){.rev-row{grid-template-columns:1fr 1fr 1fr;}}
+  .rev{background:var(--navy-card);border:1px solid var(--line);border-radius:12px;padding:24px;}
+  .rev .stars{color:var(--orange);letter-spacing:2px;margin-bottom:11px;}
+  .rev p{font-size:.96rem;margin-bottom:13px;}
+  .rev .who{font-family:var(--disp);font-weight:600;font-size:.9rem;text-transform:uppercase;}
+  .rev .who span{display:block;font-family:var(--body);text-transform:none;color:var(--ink-soft);font-size:.82rem;font-weight:300;}
+ 
+  /* final */
+  .final{background:linear-gradient(120deg,var(--orange),var(--orange-deep));color:var(--navy);border-top:none;}
+  .final .inner{padding-top:64px;padding-bottom:64px;}
+  .final h2{font-family:var(--disp);font-weight:700;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:8px;}
+  .final .ph{font-family:var(--disp);font-weight:700;font-size:clamp(2.2rem,6vw,3.4rem);margin:8px 0 18px;}
+  .final p{font-weight:500;margin-bottom:26px;max-width:460px;}
+  .final a{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;font-weight:600;border-radius:12px;padding:16px 30px;transition:transform .2s;}
+  .final a:hover{transform:translateY(-2px);}
+  .final a svg{width:18px;height:18px;fill:var(--orange);}
+ 
+  footer{background:var(--navy-2);padding:34px 0 110px;color:var(--ink-soft);font-size:.85rem;border-top:1px solid var(--line);}
+  @media(min-width:900px){footer{padding-bottom:34px;}}
+  .foot-badges{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:10px;}
+  .foot-badges span{display:inline-flex;align-items:center;gap:7px;}
+  .foot-badges svg{width:14px;height:14px;stroke:var(--orange);fill:none;stroke-width:2;}
+ 
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+ 
+<div class="sample-banner">Sample website preview built for A and S HVAC Services by Anvior. Specials shown are as advertised on your page; reviews are examples to be replaced.</div>
+ 
+<a href="tel:+16825294634" class="callbar">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  Call or Text (682) 529-4634
+</a>
+ 
+<!-- fixed left sidebar -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <span class="mk"><svg viewBox="0 0 24 24"><path d="M12 2c1 4-2 5-2 8a2 2 0 004 0c0-1 1-2 1-2 1 3-1 5-3 6a4 4 0 01-2-7c1-2 2-3 2-5z"/></svg></span>
+    <span><b>A AND S HVAC</b><span class="sub">SERVICES</span></span>
+  </div>
+  <nav class="sb-nav">
+    <a href="#specials">Specials</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+  </nav>
+  <div class="sb-contact">
+    <div class="lbl">Call or text today</div>
+    <a href="tel:+16825294634" class="sb-phone">(682) 529-4634</a>
+    <a href="tel:+16825294634" class="sb-call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call Now</a>
+    <div class="sb-tagline">"We've got your back."</div>
+  </div>
+</aside>
+ 
+<div class="main">
+ 
+  <section class="hero"><div class="inner">
+    <div class="eyebrow">Fast, reliable AC repair you can count on</div>
+    <h1>Keep your <span class="cool">cool</span>.<br>We'll handle <span class="hot">the rest</span>.</h1>
+    <p>Local, dependable HVAC service across Dallas-Fort Worth. Licensed, insured, and ready when you are, with same-day service available. We service all brands.</p>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed &amp; insured</span>
+      <span><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg> All brands serviced</span>
+      <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Same-day available</span>
+    </div>
+  </div></section>
+ 
+  <section id="specials"><div class="inner">
+    <div class="eyebrow2 reveal">Current specials</div>
+    <h2 class="sec-h reveal">AC repair <span class="o">specials</span></h2>
+    <div class="ticket reveal"><div class="tk-price"><div class="p">$79</div><div class="r">reg. $129</div></div><div class="tk-body"><h3>A/C Tune-Up</h3><p>Keep your system running at peak performance before the heat hits.</p></div></div>
+    <div class="ticket reveal"><div class="tk-price"><div class="p">$125</div><div class="r">waived w/ repair</div></div><div class="tk-body"><h3>Diagnostic Service Call</h3><p>We find the problem and tell you straight. Waived with an approved repair.</p></div></div>
+    <div class="ticket reveal"><div class="tk-price"><div class="p">$50<span style="font-size:1rem"> off</span></div><div class="r">repairs $300+</div></div><div class="tk-body"><h3>Repair Savings</h3><p>Take $50 off any repair of $300 or more.</p></div></div>
+    <div class="ticket reveal"><div class="tk-price"><div class="p">$175</div><div class="r">reg. $275</div></div><div class="tk-body"><h3>Drain Clear</h3><p>Keeps your system draining and working properly.</p></div></div>
+    <div class="free-opinion reveal"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><div><b>2nd opinion, no charge.</b> Not sure about another company's diagnosis or quote? Get a free second opinion from our team.</div></div>
+    <p class="sp-note reveal">Specials shown as advertised on the A and S HVAC page. Call to confirm current pricing.</p>
+  </div></section>
+ 
+  <section id="services"><div class="inner">
+    <div class="eyebrow2 reveal">What we do</div>
+    <h2 class="sec-h reveal">Your full-service <span class="o">AC team</span></h2>
+    <div class="svc-row reveal"><div class="num">01</div><div class="txt"><h3>AC Repair</h3><p>Fast, reliable repairs on all makes and models, with same-day service available when you need it most.</p></div></div>
+    <div class="svc-row reveal"><div class="num">02</div><div class="txt"><h3>Tune-Ups &amp; Maintenance</h3><p>Seasonal service that keeps your system efficient and heads off breakdowns before they start.</p></div></div>
+    <div class="svc-row reveal"><div class="num">03</div><div class="txt"><h3>Diagnostics</h3><p>Clear, honest diagnosis of what's wrong, with the service call waived on approved repairs.</p></div></div>
+    <div class="svc-row reveal"><div class="num">04</div><div class="txt"><h3>Drain Clearing</h3><p>Clearing condensate drains and lines so your system runs clean and trouble-free.</p></div></div>
+  </div></section>
+ 
+  <section id="why"><div class="inner">
+    <div class="eyebrow2 reveal">Why choose us</div>
+    <h2 class="sec-h reveal">Local. Reliable. <span class="o">Here for you.</span></h2>
+    <div class="why-row">
+      <div class="why-chip reveal"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><b>Fast &amp; Reliable</b><span>Same-day service available.</span></div></div>
+      <div class="why-chip reveal"><span class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6.3 6.3 1.4 1.4 6.3-6.3a4 4 0 005.4-5.4z"/></svg></span><div><b>Expert Repairs</b><span>All makes and models serviced.</span></div></div>
+      <div class="why-chip reveal"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12l3-9h12l3 9M5 12v7h14v-7"/></svg></span><div><b>Honest Pricing</b><span>Upfront, with no surprises.</span></div></div>
+      <div class="why-chip reveal"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></span><div><b>Quality Work</b><span>Satisfaction guaranteed.</span></div></div>
+    </div>
+  </div></section>
+ 
+  <section id="reviews"><div class="inner">
+    <div class="eyebrow2 reveal">Reviews</div>
+    <h2 class="sec-h reveal">What customers <span class="o">say</span></h2>
+    <div class="rev-note reveal">Note: these are sample reviews shown as examples. Your real customer reviews would be displayed here.</div>
+    <div class="rev-row">
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>"Sample review: came out fast, found the problem, and had us cool again the same day."</p><div class="who">Customer Name<span>Example review</span></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>"Sample review: honest and upfront about the cost. No surprises, just good work."</p><div class="who">Customer Name<span>Example review</span></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>"Sample review: used the tune-up special and my system runs so much better now."</p><div class="who">Customer Name<span>Example review</span></div></div>
+    </div>
+  </div></section>
+ 
+  <section class="final"><div class="inner">
+    <h2>Call or text today!</h2>
+    <div class="ph">(682) 529-4634</div>
+    <p>Local, reliable, and here for you across DFW. We service all brands.</p>
+    <a href="tel:+16825294634"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> (682) 529-4634</a>
+  </div></section>
+ 
+  <footer><div class="inner">
+    <div>A and S HVAC Services LLC · Serving Dallas-Fort Worth &amp; surrounding areas</div>
+    <div class="foot-badges">
+      <span><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed &amp; Insured</span>
+      <span><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg> All Brands</span>
+      <span>Sample preview by Anvior</span>
+    </div>
+  </div></footer>
+ 
+</div>
+ 
+<script>
+const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*50);io.unobserve(x.target);}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
