@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pablo Landscaping | Making Your Yard Beautiful, One Job at a Time</title>
+<meta name="description" content="Pablo Landscaping: over 10 years of experience making yards beautiful across the DFW metroplex. Mowing, tree trimming, sprinkler repair, and more. Free estimates. Call (972) 750-7615.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LandscapingBusiness","name":"Pablo Landscaping","telephone":"+1-972-750-7615","email":"jonathanr23009@gmail.com","address":{"@type":"PostalAddress","addressRegion":"TX","addressCountry":"US"},"areaServed":"Dallas-Fort Worth","openingHours":"Mo-Sa 07:00-18:00","priceRange":"$$","description":"Over 10 years of landscaping experience. Mowing, edging, weeding, mulching, tree trimming, yard clean up, new grass, planting flowers, tree removal, and sprinkler repair."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--forest:#1b5e20;--forest-2:#2e7d32;--sage:#4caf50;--sage-soft:#81c784;--gold:#f9a825;--gold-deep:#f57f17;--stone:#f5f2eb;--stone-2:#ebe7db;--sand:#d4c8b0;--ink:#1a1a16;--ink-soft:#5a5a4a;--ink-faint:#9a9a86;--line:#d8d0bc;--disp:"Playfair Display",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);background:var(--stone);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.1;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px;}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:500;font-size:1rem;letter-spacing:.04em;}
+  .callbar svg{width:19px;height:19px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(245,242,235,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1120px;margin:0 auto;}
+  .logo{font-family:var(--disp);font-size:1.3rem;font-weight:700;display:flex;align-items:center;gap:11px;}
+  .logo .mk{width:38px;height:38px;background:var(--forest);border-radius:6px;display:grid;place-items:center;}
+  .logo .mk svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;}
+  .logo .grn{color:var(--sage);}
+  .nav-links{display:none;gap:26px;font-size:.95rem;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--forest);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .nav-cta{background:var(--forest);color:#fff;padding:11px 22px;font-weight:500;font-size:.9rem;letter-spacing:.04em;transition:background .2s;border-radius:6px;}
+  .nav-cta:hover{background:var(--sage);}
+  .lang{font-size:.82rem;color:var(--ink-faint);margin-left:8px;font-weight:400;}
+
+  .hero{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-2) 100%);color:#fff;padding:90px 0;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(76,175,80,.3),transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(27,94,32,.5),transparent 45%);}
+  .hero::after{content:"";position:absolute;top:-100px;right:-80px;width:350px;height:350px;border-radius:50%;background:rgba(249,168,37,.12);filter:blur(40px);}
+  .hero-grid{position:relative;z-index:1;display:grid;gap:50px;align-items:center;grid-template-columns:1fr;}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:60px;}}
+  .hero .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .hero h1{font-size:clamp(2.8rem,6.5vw,5rem);color:#fff;margin-bottom:20px;}
+  .hero h1 .gold{color:var(--gold);}
+  .hero .tagline{font-family:var(--disp);font-style:italic;font-size:1.15rem;color:rgba(255,255,255,.85);margin-bottom:12px;}
+  .hero p{color:rgba(255,255,255,.78);font-size:1.12rem;max-width:460px;margin-bottom:30px;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:13px;}
+  .btn{border-radius:8px;padding:15px 26px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;font-size:1rem;font-weight:500;transition:transform .2s,background .2s;}
+  .btn svg{width:18px;height:18px;}
+  .btn-gold{background:var(--gold);color:var(--forest);}
+  .btn-gold:hover{background:var(--gold-deep);transform:translateY(-2px);}
+  .btn-gold svg{fill:var(--forest);}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);}
+  .btn-ghost:hover{border-color:#fff;}
+  .stat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:30px;backdrop-filter:blur(4px);}
+  .stat-card .sc-row{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+  .stat-card .sc-row:last-child{border-bottom:none;}
+  .stat-card .sc-row svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.7;flex-shrink:0;}
+  .stat-card .sc-row b{font-weight:600;display:block;margin-bottom:2px;}
+  .stat-card .sc-row span{font-size:.86rem;color:rgba(255,255,255,.62);}
+
+  section{padding:84px 0;}
+  .sec-eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;}
+  .sec-h{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:36px;}
+  .sec-h .grn{color:var(--forest);}
+  .sec-h .gold{color:var(--gold-deep);}
+
+  .svc-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:560px){.svc-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:900px){.svc-grid{grid-template-columns:repeat(5,1fr);}}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;transition:transform .3s,box-shadow .3s;}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 20px 40px -20px rgba(27,94,32,.35);}
+  .svc .ic{width:52px;height:52px;border-radius:50%;background:rgba(76,175,80,.12);display:grid;place-items:center;margin:0 auto 14px;}
+  .svc .ic svg{width:26px;height:26px;stroke:var(--forest);fill:none;stroke-width:1.8;}
+  .svc h4{font-size:1.05rem;font-weight:600;margin-bottom:6px;}
+  .svc p{color:var(--ink-soft);font-size:.86rem;}
+
+  .band{background:var(--forest);color:#fff;padding:80px 0;}
+  .band-grid{display:grid;gap:44px;align-items:center;grid-template-columns:1fr;}
+  @media(min-width:860px){.band-grid{grid-template-columns:1fr 1fr;gap:64px;}}
+  .band .sec-eyebrow{color:var(--gold);}
+  .band h2{color:#fff;margin-bottom:20px;}
+  .band p{color:rgba(255,255,255,.78);margin-bottom:24px;}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px;text-align:center;}
+  .stat .v{font-family:var(--disp);font-weight:700;font-size:clamp(2.2rem,5vw,3rem);color:var(--gold);line-height:1;}
+  .stat .l{font-size:.86rem;color:rgba(255,255,255,.68);margin-top:8px;}
+
+  .rev-band{background:var(--stone-2);}
+  .rev-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:#fff;border-radius:14px;padding:26px;border:1px solid var(--line);border-left:4px solid var(--sage);}
+  .rev .stars{color:var(--gold);letter-spacing:2px;font-size:.9rem;margin-bottom:12px;}
+  .rev p{font-size:.98rem;margin-bottom:12px;}
+  .rev .who{font-weight:600;font-size:.88rem;color:var(--forest);}
+  .rev .who span{display:block;color:var(--ink-faint);font-size:.8rem;font-weight:300;}
+
+  .final{background:var(--forest);color:#fff;text-align:center;padding:84px 0;position:relative;overflow:hidden;}
+  .final::after{content:"";position:absolute;bottom:-100px;right:-60px;width:300px;height:300px;border-radius:50%;background:rgba(249,168,37,.15);filter:blur(40px);}
+  .final h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:14px;color:#fff;position:relative;}
+  .final p{color:rgba(255,255,255,.78);max-width:460px;margin:0 auto 12px;position:relative;}
+  .final .email{color:var(--gold);font-weight:500;margin-bottom:28px;display:block;position:relative;}
+  .final .btn-gold{font-size:1.05rem;padding:16px 34px;position:relative;}
+  .bilingual{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;display:inline-flex;align-items:center;gap:8px;padding:8px 18px;font-size:.88rem;color:rgba(255,255,255,.85);margin-bottom:24px;position:relative;}
+  .bilingual svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.8;}
+
+  footer{background:#111a13;color:rgba(255,255,255,.5);padding:40px 0 110px;font-size:.86rem;}
+  @media(min-width:860px){footer{padding-bottom:40px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:.7s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+19727507615" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Free Estimate · (972) 750-7615</a>
+
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><span class="mk"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-7 17.3M12 2a10 10 0 017 17.3M12 22V12M7 9l5 3 5-3"/></svg></span>Pablo <span class="grn">Landscaping</span></a>
+  <nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a></nav>
+  <a href="tel:+19727507615" class="nav-cta">Free Estimate</a>
+</div></header>
+
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <div class="eyebrow">Over 10 years of experience · Free estimates</div>
+    <h1>Making your yard <span class="gold">beautiful</span>.</h1>
+    <div class="tagline">"One job at a time."</div>
+    <p>Professional landscaping and lawn care across the DFW metroplex. Mowing, tree trimming, sprinkler repair, and everything in between. Se habla español.</p>
+    <div class="hero-btns">
+      <a href="tel:+19727507615" class="btn btn-gold"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(972) 750-7615</a>
+      <a href="#services" class="btn btn-ghost">See our services</a>
+    </div>
+  </div>
+  <div class="stat-card reveal">
+    <div class="sc-row"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg><div><b>10+ years of experience</b><span>Trusted by homeowners across DFW.</span></div></div>
+    <div class="sc-row"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><div><b>Free estimates</b><span>No commitment, no pressure. Just a fair quote.</span></div></div>
+    <div class="sc-row"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg><div><b>Se habla español</b><span>Bilingual service — ask for Pablo.</span></div></div>
+  </div>
+</div></div></section>
+
+<section id="services"><div class="wrap">
+  <div class="sec-eyebrow reveal">Our services</div>
+  <h2 class="sec-h reveal">Everything your <span class="grn">yard needs.</span></h2>
+  <div class="svc-grid">
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div><h4>Mowing</h4><p>Consistent, clean cuts to keep your lawn looking sharp.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div><h4>Edging</h4><p>Crisp lines along walkways, driveways, and beds.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3v12M18 9a6 6 0 00-12 0"/></svg></div><h4>Weeding</h4><p>Remove unwanted growth and keep beds tidy.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-7 17.3M12 2a10 10 0 017 17.3"/></svg></div><h4>Mulching</h4><p>Fresh mulch to protect roots and look polished.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-7 17.3M12 2a10 10 0 017 17.3M12 22V12M7 9l5 3 5-3"/></svg></div><h4>Tree Trimming</h4><p>Shape and maintain trees for health and curb appeal.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4>Yard Clean Up</h4><p>Seasonal debris removal and full property cleanups.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><h4>New Grass</h4><p>Sod installation and seeding for a lush, green lawn.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Planting Flowers</h4><p>Colorful beds and seasonal plantings that pop.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6.3 6.3 1.4 1.4 6.3-6.3a4 4 0 005.4-5.4z"/></svg></div><h4>Tree Removal</h4><p>Safe removal of dead, damaged, or unwanted trees.</p></div>
+    <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div><h4>Sprinkler Repair</h4><p>Fix leaks, broken heads, and coverage issues fast.</p></div>
+  </div>
+</div></section>
+
+<section id="why" class="band"><div class="wrap"><div class="band-grid">
+  <div class="reveal">
+    <div class="sec-eyebrow">Why Pablo Landscaping</div>
+    <h2>A decade of making <span style="color:var(--gold)">yards beautiful</span>.</h2>
+    <p>Pablo has been transforming lawns and landscapes across Dallas-Fort Worth for over 10 years. Every job gets the same care and attention — whether it's a weekly mow or a full yard overhaul. Free estimates, fair pricing, and bilingual service.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">10+</div><div class="l">Years of experience</div></div>
+      <div class="stat"><div class="v">10</div><div class="l">Services offered</div></div>
+      <div class="stat"><div class="v">Free</div><div class="l">Estimates, always</div></div>
+      <div class="stat"><div class="v">ES/EN</div><div class="l">Bilingual service</div></div>
+    </div>
+  </div>
+  <ul style="list-style:none;display:grid;gap:0;" class="reveal">
+    <li style="display:flex;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12);"><svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg><div><b style="font-weight:600;display:block;margin-bottom:2px;">Experienced crew</b><span style="font-size:.9rem;color:rgba(255,255,255,.68);">Over a decade of hands-on landscaping work across DFW properties.</span></div></li>
+    <li style="display:flex;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12);"><svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg><div><b style="font-weight:600;display:block;margin-bottom:2px;">Fair, honest pricing</b><span style="font-size:.9rem;color:rgba(255,255,255,.68);">Free estimates with no surprises. You know the price before work starts.</span></div></li>
+    <li style="display:flex;gap:14px;padding:18px 0;"><svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg><div><b style="font-weight:600;display:block;margin-bottom:2px;">Se habla español</b><span style="font-size:.9rem;color:rgba(255,255,255,.68);">Communicate in the language you're most comfortable with.</span></div></li>
+  </ul>
+</div></div></section>
+
+<section id="reviews" class="rev-band"><div class="wrap">
+  <div class="sec-eyebrow reveal">Reviews</div>
+  <h2 class="sec-h reveal">Neighbors who <span class="grn">noticed the difference.</span></h2>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Pablo and his crew transformed our front yard. The edging and mulching made it look like a brand new house. Highly recommend!"</p><div class="who">Maria G.<span>DFW Area</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"They showed up on time, gave a fair estimate, and did incredible work on our tree trimming. Will definitely call again."</p><div class="who">David R.<span>DFW Area</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Love that I can communicate in Spanish. Pablo is professional, reliable, and my yard has never looked better. 10 out of 10."</p><div class="who">Ana L.<span>DFW Area</span></div></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <div class="bilingual"><svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10M12 2a15 15 0 00-4 10 15 15 0 004 10"/></svg>English &amp; Spanish</div>
+  <h2>Ready for a yard you love?</h2>
+  <p>Call for a free estimate — no obligation, no pressure. Or send an email and we'll get back to you.</p>
+  <a href="mailto:jonathanr23009@gmail.com" class="email">jonathanr23009@gmail.com</a>
+  <a href="tel:+19727507615" class="btn btn-gold"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call (972) 750-7615</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>Pablo Landscaping · DFW Metroplex</div>
+  <div>(972) 750-7615 · Site by Anvior</div>
+  <div>© 2026</div>
+</div></footer>
+<script>const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>
