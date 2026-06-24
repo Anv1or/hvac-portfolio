@@ -69,13 +69,31 @@
   .vp p{color:var(--ink-soft);font-size:.94rem;}
   /* gallery */
   .gallery{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .filter-bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:44px;}
+  .filter-btn{font-family:var(--font-body);font-size:.88rem;font-weight:500;padding:9px 20px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);cursor:pointer;transition:all .3s;}
+  .filter-btn:hover{border-color:var(--blue);color:var(--blue);}
+  .filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue);}
   .g-grid{display:grid;gap:26px;grid-template-columns:1fr;}
   @media(min-width:720px){.g-grid{grid-template-columns:1fr 1fr;}}
   @media(min-width:1060px){.g-grid{grid-template-columns:repeat(3,1fr);}}
-  .g-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--canvas);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
+  .g-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--canvas);transition:transform .4s,box-shadow .4s,opacity .4s;display:flex;flex-direction:column;opacity:1;}
+  .g-card.hidden{display:none;}
+  .g-card.fade-in{animation:cardIn .45s cubic-bezier(.2,.7,.2,1) both;}
+  @keyframes cardIn{from{opacity:0;transform:translateY(18px) scale(.97);}to{opacity:1;transform:none;}}
   .g-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+  .g-card.featured{grid-column:1 / -1;}
+  @media(min-width:720px){.g-card.featured{grid-column:1 / -1;display:grid;grid-template-columns:1.3fr 1fr;border-radius:20px;}}
+  .g-card.featured .g-frame{aspect-ratio:16/10;border-bottom:1px solid var(--line);}
+  @media(min-width:720px){.g-card.featured .g-frame{aspect-ratio:auto;height:100%;border-bottom:0;border-right:1px solid var(--line);}}
+  .g-card.featured .g-body{padding:32px 34px;justify-content:center;gap:10px;}
+  .g-card.featured .g-body h3{font-size:1.7rem;}
+  .g-card.featured .g-body p{font-size:1.02rem;}
+  .g-card.featured .g-body .chip{font-size:.78rem;padding:6px 14px;}
   .g-frame{position:relative;width:100%;aspect-ratio:16/11;overflow:hidden;border-bottom:1px solid var(--line);background:#fff;}
   .g-frame iframe{position:absolute;top:0;left:0;width:1280px;height:880px;border:0;transform:scale(.305);transform-origin:top left;pointer-events:none;}
+  .g-card.featured .g-frame iframe{transform-origin:top left;}
+  @media(min-width:720px){.g-card.featured .g-frame iframe{width:1280px;height:880px;transform:scale(.48);}}
+  @media(min-width:1060px){.g-card.featured .g-frame iframe{transform:scale(.56);}}
   .g-frame .overlay{position:absolute;inset:0;z-index:2;}
   .g-body{padding:22px 24px;display:flex;flex-direction:column;gap:6px;flex:1;}
   .g-body .gt{display:flex;align-items:center;justify-content:space-between;gap:10px;}
@@ -85,6 +103,7 @@
   .g-body .view{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--blue);font-size:.95rem;}
   .g-body .view svg{width:16px;height:16px;fill:var(--blue);transition:transform .2s;}
   .g-card:hover .view svg{transform:translateX(4px);}
+  .g-count{text-align:center;margin-top:28px;color:var(--ink-faint);font-size:.9rem;transition:opacity .3s;}
   /* components offering */
   .comp-grid{display:grid;gap:16px;grid-template-columns:1fr;}
   @media(min-width:560px){.comp-grid{grid-template-columns:1fr 1fr;}}
@@ -193,20 +212,35 @@
 </div></section>
  
 <section id="work" class="gallery"><div class="wrap">
-  <div class="sec-head reveal"><div class="kicker">The work</div><h2>Pick a style, <em>any industry</em></h2><p>Real, working sample pages across different industries. Each with a different look, layout, and feel. Tell me which one fits your business and I'll tailor it to you.</p></div>
-  <div class="g-grid">
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/hvac-modern.html" title="Modern Refined sample" loading="lazy" scrolling="no"></iframe><a href="templates/hvac-modern.html" target="_blank" class="overlay" aria-label="Open Modern Refined sample"></a></div><div class="g-body"><div class="gt"><h3>Modern Refined</h3><span class="chip">HVAC</span></div><p>Calm, premium, and trustworthy. Soft tones with an editorial serif touch.</p><a href="templates/hvac-modern.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-editorial.html" title="Bold Editorial sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-editorial.html" target="_blank" class="overlay" aria-label="Open Bold Editorial sample"></a></div><div class="g-body"><div class="gt"><h3>Bold Editorial</h3><span class="chip">HVAC</span></div><p>Oversized type, a moving marquee, and a confident magazine attitude.</p><a href="templates/style-editorial.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-dark.html" title="Dark Premium sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-dark.html" target="_blank" class="overlay" aria-label="Open Dark Premium sample"></a></div><div class="g-body"><div class="gt"><h3>Dark Premium</h3><span class="chip">HVAC</span></div><p>Dark mode with glowing accents and a swipeable service carousel.</p><a href="templates/style-dark.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-warm.html" title="Warm Approachable sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-warm.html" target="_blank" class="overlay" aria-label="Open Warm Approachable sample"></a></div><div class="g-body"><div class="gt"><h3>Warm &amp; Friendly</h3><span class="chip">HVAC</span></div><p>Rounded, inviting, and family-friendly with soft earthy color.</p><a href="templates/style-warm.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-corporate.html" title="Clean Corporate sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-corporate.html" target="_blank" class="overlay" aria-label="Open Clean Corporate sample"></a></div><div class="g-body"><div class="gt"><h3>Clean Corporate</h3><span class="chip">HVAC</span></div><p>Structured and credible with an interactive tabbed service panel.</p><a href="templates/style-corporate.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-energetic.html" title="Energetic Modern sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-energetic.html" target="_blank" class="overlay" aria-label="Open Energetic Modern sample"></a></div><div class="g-body"><div class="gt"><h3>Energetic</h3><span class="chip">HVAC</span></div><p>Hot sunset gradients and an expanding accordion of services.</p><a href="templates/style-energetic.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-salon.html" title="Salon sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-salon.html" target="_blank" class="overlay" aria-label="Open Salon sample"></a></div><div class="g-body"><div class="gt"><h3>Salon</h3><span class="chip">Beauty</span></div><p>Elegant and polished with a focus on bookings and style galleries.</p><a href="templates/style-salon.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-landscape.html" title="Landscaping sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-landscape.html" target="_blank" class="overlay" aria-label="Open Landscaping sample"></a></div><div class="g-body"><div class="gt"><h3>Landscaping</h3><span class="chip">Outdoor</span></div><p>Fresh, earthy tones that showcase outdoor work and seasonal services.</p><a href="templates/style-landscape.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-garage.html" title="Auto Garage sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-garage.html" target="_blank" class="overlay" aria-label="Open Auto Garage sample"></a></div><div class="g-body"><div class="gt"><h3>Auto Garage</h3><span class="chip">Automotive</span></div><p>Rugged and dependable with a layout built around services and trust.</p><a href="templates/style-garage.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-foodtruck.html" title="Food Truck sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-foodtruck.html" target="_blank" class="overlay" aria-label="Open Food Truck sample"></a></div><div class="g-body"><div class="gt"><h3>Food Truck</h3><span class="chip">Food &amp; Bev</span></div><p>Fun, colorful, and mouth-watering with menus and location info front and center.</p><a href="templates/style-foodtruck.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
-    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-cleaning.html" title="Cleaning Service sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-cleaning.html" target="_blank" class="overlay" aria-label="Open Cleaning Service sample"></a></div><div class="g-body"><div class="gt"><h3>Cleaning Service</h3><span class="chip">Home Service</span></div><p>Bright and spotless design that builds instant trust and drives bookings.</p><a href="templates/style-cleaning.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+  <div class="sec-head reveal"><div class="kicker">The work</div><h2>Pick a style, <em>any industry</em></h2><p>Real, working sample pages across different industries. Each with a different look, layout, and feel. Filter by category or browse them all.</p></div>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" data-filter="all">All templates</button>
+    <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+    <button class="filter-btn" data-filter="hvac">HVAC</button>
+    <button class="filter-btn" data-filter="fitness">Fitness</button>
+    <button class="filter-btn" data-filter="pet-care">Pet Care</button>
+    <button class="filter-btn" data-filter="legal">Legal</button>
+    <button class="filter-btn" data-filter="photography">Photography</button>
+    <button class="filter-btn" data-filter="beauty">Beauty</button>
+    <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+    <button class="filter-btn" data-filter="automotive">Automotive</button>
+    <button class="filter-btn" data-filter="food">Food &amp; Bev</button>
+    <button class="filter-btn" data-filter="home-service">Home Service</button>
   </div>
+  <div class="g-grid" id="galleryGrid">
+    <div class="g-card featured reveal" data-cat="real-estate"><div class="g-frame"><iframe src="templates/hvac-modern.html" title="Modern Refined – Real Estate sample" loading="lazy" scrolling="no"></iframe><a href="templates/hvac-modern.html" target="_blank" class="overlay" aria-label="Open Modern Refined sample"></a></div><div class="g-body"><div class="gt"><h3>Modern Refined</h3><span class="chip">Real Estate</span></div><p>Calm, premium, and trustworthy. Soft tones with an editorial serif touch. Our most popular starting point for service businesses.</p><a href="templates/hvac-modern.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="hvac"><div class="g-frame"><iframe src="templates/style-editorial.html" title="Bold Editorial sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-editorial.html" target="_blank" class="overlay" aria-label="Open Bold Editorial sample"></a></div><div class="g-body"><div class="gt"><h3>Bold Editorial</h3><span class="chip">HVAC</span></div><p>Oversized type, a moving marquee, and a confident magazine attitude.</p><a href="templates/style-editorial.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="fitness"><div class="g-frame"><iframe src="templates/style-dark.html" title="Dark Premium – Fitness sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-dark.html" target="_blank" class="overlay" aria-label="Open Dark Premium sample"></a></div><div class="g-body"><div class="gt"><h3>Dark Premium</h3><span class="chip">Fitness</span></div><p>Dark mode with glowing accents and a swipeable service carousel.</p><a href="templates/style-dark.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="pet-care"><div class="g-frame"><iframe src="templates/style-warm.html" title="Warm Approachable – Pet Care sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-warm.html" target="_blank" class="overlay" aria-label="Open Warm Approachable sample"></a></div><div class="g-body"><div class="gt"><h3>Warm &amp; Friendly</h3><span class="chip">Pet Care</span></div><p>Rounded, inviting, and family-friendly with soft earthy color.</p><a href="templates/style-warm.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="legal"><div class="g-frame"><iframe src="templates/style-corporate.html" title="Clean Corporate – Law Firm sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-corporate.html" target="_blank" class="overlay" aria-label="Open Clean Corporate sample"></a></div><div class="g-body"><div class="gt"><h3>Clean Corporate</h3><span class="chip">Legal</span></div><p>Structured and credible with an interactive tabbed service panel.</p><a href="templates/style-corporate.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="photography"><div class="g-frame"><iframe src="templates/style-energetic.html" title="Energetic – Photography sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-energetic.html" target="_blank" class="overlay" aria-label="Open Energetic sample"></a></div><div class="g-body"><div class="gt"><h3>Energetic</h3><span class="chip">Photography</span></div><p>Hot sunset gradients and an expanding accordion of services.</p><a href="templates/style-energetic.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="beauty"><div class="g-frame"><iframe src="templates/style-salon.html" title="Salon sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-salon.html" target="_blank" class="overlay" aria-label="Open Salon sample"></a></div><div class="g-body"><div class="gt"><h3>Salon</h3><span class="chip">Beauty</span></div><p>Elegant and polished with a focus on bookings and style galleries.</p><a href="templates/style-salon.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="outdoor"><div class="g-frame"><iframe src="templates/style-landscape.html" title="Landscaping sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-landscape.html" target="_blank" class="overlay" aria-label="Open Landscaping sample"></a></div><div class="g-body"><div class="gt"><h3>Landscaping</h3><span class="chip">Outdoor</span></div><p>Fresh, earthy tones that showcase outdoor work and seasonal services.</p><a href="templates/style-landscape.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="automotive"><div class="g-frame"><iframe src="templates/style-garage.html" title="Auto Garage sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-garage.html" target="_blank" class="overlay" aria-label="Open Auto Garage sample"></a></div><div class="g-body"><div class="gt"><h3>Auto Garage</h3><span class="chip">Automotive</span></div><p>Rugged and dependable with a layout built around services and trust.</p><a href="templates/style-garage.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="food"><div class="g-frame"><iframe src="templates/style-foodtruck.html" title="Food Truck sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-foodtruck.html" target="_blank" class="overlay" aria-label="Open Food Truck sample"></a></div><div class="g-body"><div class="gt"><h3>Food Truck</h3><span class="chip">Food &amp; Bev</span></div><p>Fun, colorful, and mouth-watering with menus and location info front and center.</p><a href="templates/style-foodtruck.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal" data-cat="home-service"><div class="g-frame"><iframe src="templates/style-cleaning.html" title="Cleaning Service sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-cleaning.html" target="_blank" class="overlay" aria-label="Open Cleaning Service sample"></a></div><div class="g-body"><div class="gt"><h3>Cleaning Service</h3><span class="chip">Home Service</span></div><p>Bright and spotless design that builds instant trust and drives bookings.</p><a href="templates/style-cleaning.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+  </div>
+  <div class="g-count reveal" id="galleryCount">Showing all 11 templates — each style works for any industry</div>
 </div></section>
  
 <section id="components"><div class="wrap">
@@ -272,7 +306,7 @@
     </div>
     <div class="row2">
       <div><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(214) 555-0000"></div>
-      <div><label for="style">Style you liked</label><select id="style" name="style_interested_in"><option value="Not sure yet">Not sure yet</option><option>Modern Refined</option><option>Bold Editorial</option><option>Dark Premium</option><option>Warm &amp; Friendly</option><option>Clean Corporate</option><option>Energetic</option><option>Salon</option><option>Landscaping</option><option>Auto Garage</option><option>Food Truck</option><option>Cleaning Service</option><option>Just a component</option></select></div>
+      <div><label for="style">Style you liked</label><select id="style" name="style_interested_in"><option value="Not sure yet">Not sure yet</option><option>Modern Refined (Real Estate)</option><option>Bold Editorial (HVAC)</option><option>Dark Premium (Fitness)</option><option>Warm &amp; Friendly (Pet Care)</option><option>Clean Corporate (Legal)</option><option>Energetic (Photography)</option><option>Salon</option><option>Landscaping</option><option>Auto Garage</option><option>Food Truck</option><option>Cleaning Service</option><option>Just a component</option></select></div>
     </div>
     <label for="message">Tell me about your business</label>
     <textarea id="message" name="message" required placeholder="What does your business do, where do you serve, and what do you need?"></textarea>
@@ -290,7 +324,41 @@
 <script>
 const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*50);io.unobserve(x.target);}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
- 
+
+(function(){
+  const grid=document.getElementById('galleryGrid');
+  const counter=document.getElementById('galleryCount');
+  const btns=document.querySelectorAll('.filter-btn');
+  if(!grid||!btns.length)return;
+  const cards=grid.querySelectorAll('.g-card');
+  btns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      btns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      let visible=0;
+      cards.forEach((c,i)=>{
+        const match=f==='all'||c.dataset.cat===f;
+        if(match){
+          c.classList.remove('hidden');
+          c.classList.add('fade-in');
+          c.style.animationDelay=i*40+'ms';
+          visible++;
+          if(f!=='all'){c.classList.remove('featured');}
+          else if(c===cards[0]){c.classList.add('featured');}
+        }else{
+          c.classList.add('hidden');
+          c.classList.remove('fade-in','featured');
+        }
+      });
+      if(counter){
+        const label=f==='all'?'all '+visible+' templates':visible+' '+btn.textContent+' template'+(visible!==1?'s':'');
+        counter.textContent='Showing '+label;
+      }
+    });
+  });
+})();
+
 const form=document.getElementById('quoteForm');
 const status=document.getElementById('formStatus');
 if(form){form.addEventListener('submit',async(e)=>{
