@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static Pages That Get You Calls — Web Design Portfolio</title>
+<meta name="description" content="Fast, mobile-first websites for small businesses. Built to get the phone ringing. Design, hosting, and deployment handled for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14233a;--ink-soft:#51607a;--ink-faint:#8893a6;--canvas:#fafaf8;--card:#ffffff;
+    --blue:#135b9e;--blue-deep:#0d4377;--ember:#e8772e;--line:#e6e7e2;--line-soft:#eef0ec;
+    --shadow-sm:0 1px 2px rgba(20,35,58,.04),0 4px 16px -8px rgba(20,35,58,.10);
+    --shadow-lg:0 30px 70px -32px rgba(19,91,158,.30);
+    --font-display:"Fraunces",Georgia,serif;--font-body:"Outfit",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--canvas);color:var(--ink);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.1;letter-spacing:-.02em;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px;}
+  .pill{border-radius:100px;font-family:var(--font-body);font-weight:500;display:inline-flex;align-items:center;gap:9px;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:none;}
+  .pill svg{width:18px;height:18px;}
+  .pill-solid{background:var(--blue);color:#fff;padding:15px 28px;font-size:1rem;box-shadow:var(--shadow-sm);}
+  .pill-solid:hover{background:var(--blue-deep);transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+  .pill-ember{background:var(--ember);color:#fff;padding:15px 28px;font-size:1rem;}
+  .pill-ember:hover{transform:translateY(-2px);filter:brightness(.96);}
+  .pill-line{background:transparent;color:var(--ink);padding:15px 28px;font-size:1rem;border:1px solid var(--line);}
+  .pill-line:hover{border-color:var(--ink);transform:translateY(-2px);}
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(250,250,248,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-weight:600;font-size:1.18rem;}
+  .logo-mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--ember));display:grid;place-items:center;color:#fff;font-size:1rem;}
+  .nav-links{display:none;gap:32px;font-size:.97rem;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--blue);}
+  @media(min-width:880px){.nav-links{display:flex;}}
+  .nav .pill-solid{padding:11px 22px;font-size:.92rem;}
+  /* hero */
+  .hero{padding:84px 0 70px;position:relative;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 85% 12%,rgba(232,119,46,.10),transparent 42%),radial-gradient(circle at 8% 90%,rgba(19,91,158,.10),transparent 42%);}
+  .hero .wrap{position:relative;z-index:1;text-align:center;}
+  .tag{display:inline-flex;align-items:center;gap:9px;font-size:.83rem;font-weight:500;color:var(--blue);background:rgba(19,91,158,.07);padding:7px 16px;border-radius:100px;margin-bottom:28px;}
+  .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--ember);}
+  .hero h1{font-size:clamp(2.7rem,6.5vw,5rem);font-weight:400;margin-bottom:24px;max-width:14ch;margin-left:auto;margin-right:auto;}
+  .hero h1 em{font-style:italic;color:var(--blue);}
+  .hero .lead{font-size:clamp(1.08rem,2vw,1.3rem);color:var(--ink-soft);max-width:600px;margin:0 auto 36px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:center;margin-top:46px;color:var(--ink-soft);font-size:.92rem;}
+  .hero-trust span{display:inline-flex;align-items:center;gap:8px;}
+  .hero-trust svg{width:18px;height:18px;stroke:var(--blue);fill:none;stroke-width:1.8;}
+  section{padding:90px 0;}
+  .sec-head{text-align:center;max-width:620px;margin:0 auto 56px;}
+  .kicker{font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);margin-bottom:16px;}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:400;}
+  .sec-head h2 em{font-style:italic;color:var(--blue);}
+  .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:1.05rem;}
+  /* value props */
+  .vp-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:640px){.vp-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.vp-grid{grid-template-columns:repeat(4,1fr);}}
+  .vp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;transition:transform .3s,box-shadow .3s;}
+  .vp:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+  .vp .ic{width:48px;height:48px;border-radius:12px;background:rgba(19,91,158,.08);display:grid;place-items:center;margin-bottom:18px;}
+  .vp .ic svg{width:25px;height:25px;stroke:var(--blue);fill:none;stroke-width:1.6;}
+  .vp h4{font-size:1.15rem;font-weight:500;margin-bottom:9px;}
+  .vp p{color:var(--ink-soft);font-size:.94rem;}
+  /* gallery */
+  .gallery{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .g-grid{display:grid;gap:26px;grid-template-columns:1fr;}
+  @media(min-width:720px){.g-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:1060px){.g-grid{grid-template-columns:repeat(3,1fr);}}
+  .g-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--canvas);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;}
+  .g-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+  .g-frame{position:relative;width:100%;aspect-ratio:16/11;overflow:hidden;border-bottom:1px solid var(--line);background:#fff;}
+  .g-frame iframe{position:absolute;top:0;left:0;width:1280px;height:880px;border:0;transform:scale(.305);transform-origin:top left;pointer-events:none;}
+  .g-frame .overlay{position:absolute;inset:0;z-index:2;}
+  .g-body{padding:22px 24px;display:flex;flex-direction:column;gap:6px;flex:1;}
+  .g-body .gt{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .g-body h3{font-size:1.3rem;font-weight:500;}
+  .g-body .chip{font-size:.72rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);background:rgba(19,91,158,.08);padding:5px 11px;border-radius:100px;white-space:nowrap;}
+  .g-body p{color:var(--ink-soft);font-size:.93rem;margin-bottom:6px;}
+  .g-body .view{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--blue);font-size:.95rem;}
+  .g-body .view svg{width:16px;height:16px;fill:var(--blue);transition:transform .2s;}
+  .g-card:hover .view svg{transform:translateX(4px);}
+  /* components offering */
+  .comp-grid{display:grid;gap:16px;grid-template-columns:1fr;}
+  @media(min-width:560px){.comp-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:920px){.comp-grid{grid-template-columns:repeat(4,1fr);}}
+  .comp-tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .3s,box-shadow .3s,border-color .3s;}
+  .comp-tile:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent;}
+  .comp-tile .ic{width:44px;height:44px;border-radius:11px;background:rgba(232,119,46,.1);display:grid;place-items:center;margin-bottom:16px;}
+  .comp-tile .ic svg{width:23px;height:23px;stroke:var(--ember);fill:none;stroke-width:1.7;}
+  .comp-tile h4{font-size:1.08rem;font-weight:500;margin-bottom:7px;}
+  .comp-tile p{color:var(--ink-soft);font-size:.9rem;}
+  .comp-cta{text-align:center;margin-top:42px;}
+  /* pricing */
+  .price-grid{display:grid;gap:24px;grid-template-columns:1fr;}
+  @media(min-width:760px){.price-grid{grid-template-columns:repeat(3,1fr);}}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 30px;display:flex;flex-direction:column;position:relative;}
+  .price.featured{border-color:var(--blue);box-shadow:var(--shadow-lg);}
+  .price .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ember);color:#fff;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 16px;border-radius:100px;}
+  .price h3{font-size:1.4rem;font-weight:500;margin-bottom:6px;}
+  .price .tagline{color:var(--ink-soft);font-size:.92rem;margin-bottom:22px;min-height:42px;}
+  .price .amt{font-family:var(--font-display);font-size:2.8rem;font-weight:500;line-height:1;}
+  .price .amt span{font-size:1rem;color:var(--ink-faint);font-family:var(--font-body);}
+  .price .amt-sub{color:var(--ink-faint);font-size:.84rem;margin-top:6px;margin-bottom:24px;}
+  .price ul{list-style:none;display:grid;gap:12px;margin-bottom:28px;flex:1;}
+  .price li{display:flex;gap:11px;align-items:flex-start;font-size:.94rem;color:var(--ink-soft);}
+  .price li svg{width:19px;height:19px;stroke:var(--blue);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px;}
+  .price .pill{justify-content:center;width:100%;}
+  .price-note{text-align:center;color:var(--ink-soft);font-size:.95rem;margin-top:32px;max-width:640px;margin-left:auto;margin-right:auto;}
+  /* hosting callout */
+  .host{background:var(--ink);color:var(--canvas);}
+  .host-inner{display:grid;gap:38px;align-items:center;grid-template-columns:1fr;}
+  @media(min-width:860px){.host-inner{grid-template-columns:1fr 1fr;gap:60px;}}
+  .host .kicker{color:var(--ember);}
+  .host h2{color:#fff;font-weight:400;font-size:clamp(1.9rem,4vw,2.8rem);}
+  .host h2 em{font-style:italic;color:var(--ember);}
+  .host p{color:rgba(250,250,248,.75);margin-top:16px;}
+  .host ul{list-style:none;display:grid;gap:16px;}
+  .host li{display:flex;gap:14px;align-items:flex-start;}
+  .host li svg{width:23px;height:23px;stroke:var(--ember);fill:none;stroke-width:1.8;flex-shrink:0;margin-top:2px;}
+  .host li b{display:block;font-weight:500;color:#fff;margin-bottom:3px;}
+  .host li span{font-size:.92rem;color:rgba(250,250,248,.68);}
+  /* process */
+  .steps{display:grid;gap:22px;grid-template-columns:1fr;counter-reset:s;}
+  @media(min-width:680px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1000px){.steps{grid-template-columns:repeat(4,1fr);}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;position:relative;}
+  .step .n{font-family:var(--font-display);font-size:2.4rem;font-weight:500;color:var(--ember);line-height:1;margin-bottom:14px;}
+  .step h4{font-size:1.15rem;font-weight:500;margin-bottom:8px;}
+  .step p{color:var(--ink-soft);font-size:.93rem;}
+  /* contact form */
+  .cform{max-width:560px;margin:0 auto;text-align:left;position:relative;}
+  .cform .row2{display:grid;gap:16px;grid-template-columns:1fr;}
+  @media(min-width:520px){.cform .row2{grid-template-columns:1fr 1fr;}}
+  .cform label{display:block;font-size:.86rem;font-weight:500;color:#fff;margin-bottom:7px;}
+  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--font-body);font-size:1rem;font-weight:300;color:var(--ink);background:#fff;border:1px solid transparent;border-radius:12px;padding:14px 16px;margin-bottom:16px;}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--ember);outline-offset:1px;}
+  .cform textarea{resize:vertical;min-height:110px;}
+  .cform .hp{position:absolute;left:-9999px;top:-9999px;}
+  .cform button{width:100%;justify-content:center;font-size:1.05rem;padding:16px;}
+  .cform .note{color:rgba(255,255,255,.7);font-size:.84rem;margin-top:4px;text-align:center;}
+  .form-status{display:none;text-align:center;padding:20px;border-radius:14px;font-size:1.05rem;margin-top:8px;}
+  .form-status.ok{display:block;background:rgba(255,255,255,.14);color:#fff;}
+  .form-status.err{display:block;background:rgba(232,119,46,.2);color:#fff;}
+  /* final */
+  .final{text-align:center;}
+  .final-inner{background:var(--blue);color:#fff;border-radius:28px;padding:78px 32px;position:relative;overflow:hidden;}
+  .final-inner::after{content:"";position:absolute;bottom:-80px;right:-40px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(232,119,46,.4),transparent 70%);}
+  .final h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:18px;font-weight:400;position:relative;}
+  .final p{max-width:480px;margin:0 auto 34px;color:rgba(255,255,255,.85);position:relative;font-size:1.08rem;}
+  .final .pill-ember{position:relative;font-size:1.1rem;padding:18px 38px;}
+  footer{padding:54px 0;color:var(--ink-faint);font-size:.9rem;border-top:1px solid var(--line);}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><img src="assets/anviortranslogo.png" alt="Anvior" style="height:42px;width:auto;display:block;"></a>
+  <nav class="nav-links"><a href="#work">Work</a><a href="#components">Components</a><a href="#pricing">Pricing</a><a href="#hosting">Hosting</a><a href="#process">Process</a></nav>
+  <a href="#contact" class="pill pill-solid">Get a quote</a>
+</div></header>
+ 
+<section class="hero"><div class="wrap">
+  <span class="tag"><span class="dot"></span> Websites for small businesses</span>
+  <h1>Static pages that <em>get you calls</em>.</h1>
+  <p class="lead">Fast, mobile-first websites built to turn searches into customers. Designed, hosted, and deployed for you with no tech headaches and no monthly platform fees you don't understand.</p>
+  <div class="hero-cta">
+    <a href="#contact" class="pill pill-solid">Get a free quote</a>
+    <a href="#work" class="pill pill-line">See the work</a>
+  </div>
+  <div class="hero-trust">
+    <span><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg> Loads in under a second</span>
+    <span><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/></svg> Built mobile-first</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg> Found by Google &amp; AI search</span>
+  </div>
+</div></section>
+ 
+<section><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Why it works</div><h2>Built for the way customers <em>actually find you</em></h2></div>
+  <div class="vp-grid">
+    <div class="vp reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02z"/></svg></div><h4>Tap-to-call first</h4><p>Every page is built around getting the phone to ring, not burying you behind a contact form.</p></div>
+    <div class="vp reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h4>Mobile-first</h4><p>Most "near me" searches happen on a phone. Your site is designed for that screen before any other.</p></div>
+    <div class="vp reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><h4>Lightning fast</h4><p>Static pages mean near-instant loads. Visitors don't wait, and search engines reward the speed.</p></div>
+    <div class="vp reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h4>Search &amp; AI ready</h4><p>Clean, structured markup so Google and AI assistants can read and recommend your business.</p></div>
+  </div>
+</div></section>
+ 
+<section id="work" class="gallery"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">The work</div><h2>Pick a style, <em>any industry</em></h2><p>Real, working sample pages across different industries. Each with a different look, layout, and feel. Tell me which one fits your business and I'll tailor it to you.</p></div>
+  <div class="g-grid">
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/hvac-modern.html" title="Modern Refined sample" loading="lazy" scrolling="no"></iframe><a href="templates/hvac-modern.html" target="_blank" class="overlay" aria-label="Open Modern Refined sample"></a></div><div class="g-body"><div class="gt"><h3>Modern Refined</h3><span class="chip">HVAC</span></div><p>Calm, premium, and trustworthy. Soft tones with an editorial serif touch.</p><a href="templates/hvac-modern.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-editorial.html" title="Bold Editorial sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-editorial.html" target="_blank" class="overlay" aria-label="Open Bold Editorial sample"></a></div><div class="g-body"><div class="gt"><h3>Bold Editorial</h3><span class="chip">HVAC</span></div><p>Oversized type, a moving marquee, and a confident magazine attitude.</p><a href="templates/style-editorial.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-dark.html" title="Dark Premium sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-dark.html" target="_blank" class="overlay" aria-label="Open Dark Premium sample"></a></div><div class="g-body"><div class="gt"><h3>Dark Premium</h3><span class="chip">HVAC</span></div><p>Dark mode with glowing accents and a swipeable service carousel.</p><a href="templates/style-dark.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-warm.html" title="Warm Approachable sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-warm.html" target="_blank" class="overlay" aria-label="Open Warm Approachable sample"></a></div><div class="g-body"><div class="gt"><h3>Warm &amp; Friendly</h3><span class="chip">HVAC</span></div><p>Rounded, inviting, and family-friendly with soft earthy color.</p><a href="templates/style-warm.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-corporate.html" title="Clean Corporate sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-corporate.html" target="_blank" class="overlay" aria-label="Open Clean Corporate sample"></a></div><div class="g-body"><div class="gt"><h3>Clean Corporate</h3><span class="chip">HVAC</span></div><p>Structured and credible with an interactive tabbed service panel.</p><a href="templates/style-corporate.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-energetic.html" title="Energetic Modern sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-energetic.html" target="_blank" class="overlay" aria-label="Open Energetic Modern sample"></a></div><div class="g-body"><div class="gt"><h3>Energetic</h3><span class="chip">HVAC</span></div><p>Hot sunset gradients and an expanding accordion of services.</p><a href="templates/style-energetic.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-salon.html" title="Salon sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-salon.html" target="_blank" class="overlay" aria-label="Open Salon sample"></a></div><div class="g-body"><div class="gt"><h3>Salon</h3><span class="chip">Beauty</span></div><p>Elegant and polished with a focus on bookings and style galleries.</p><a href="templates/style-salon.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-landscape.html" title="Landscaping sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-landscape.html" target="_blank" class="overlay" aria-label="Open Landscaping sample"></a></div><div class="g-body"><div class="gt"><h3>Landscaping</h3><span class="chip">Outdoor</span></div><p>Fresh, earthy tones that showcase outdoor work and seasonal services.</p><a href="templates/style-landscape.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-garage.html" title="Auto Garage sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-garage.html" target="_blank" class="overlay" aria-label="Open Auto Garage sample"></a></div><div class="g-body"><div class="gt"><h3>Auto Garage</h3><span class="chip">Automotive</span></div><p>Rugged and dependable with a layout built around services and trust.</p><a href="templates/style-garage.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-foodtruck.html" title="Food Truck sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-foodtruck.html" target="_blank" class="overlay" aria-label="Open Food Truck sample"></a></div><div class="g-body"><div class="gt"><h3>Food Truck</h3><span class="chip">Food &amp; Bev</span></div><p>Fun, colorful, and mouth-watering with menus and location info front and center.</p><a href="templates/style-foodtruck.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+    <div class="g-card reveal"><div class="g-frame"><iframe src="templates/style-cleaning.html" title="Cleaning Service sample" loading="lazy" scrolling="no"></iframe><a href="templates/style-cleaning.html" target="_blank" class="overlay" aria-label="Open Cleaning Service sample"></a></div><div class="g-body"><div class="gt"><h3>Cleaning Service</h3><span class="chip">Home Service</span></div><p>Bright and spotless design that builds instant trust and drives bookings.</p><a href="templates/style-cleaning.html" target="_blank" class="view">Open live page <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a></div></div>
+  </div>
+</div></section>
+ 
+<section id="components"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">À la carte</div><h2>Just need <em>one piece?</em></h2><p>Already have a website but it's missing something? I build individual, drop-in components and elements you can add to any page. Priced one at a time.</p></div>
+  <div class="comp-grid">
+    <div class="comp-tile reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02z"/></svg></div><h4>Click-to-call heroes</h4><p>A bold top section built around a tap-to-call button that gets the phone ringing.</p></div>
+    <div class="comp-tile reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg></div><h4>Service grids &amp; lists</h4><p>Clean, responsive layouts to show off everything your business offers.</p></div>
+    <div class="comp-tile reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div><h4>Review &amp; trust blocks</h4><p>Testimonials, star ratings, and credibility badges that win over doubters.</p></div>
+    <div class="comp-tile reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg></div><h4>FAQ &amp; service-area</h4><p>Expandable FAQs and "where we work" sections that also help you get found.</p></div>
+  </div>
+  <div class="comp-cta reveal">
+    <a href="components/components.html" target="_blank" class="pill pill-line">Browse the full component library <svg viewBox="0 0 24 24" style="fill:currentColor"><path d="M5 12h14M13 6l6 6-6 6z"/></svg></a>
+  </div>
+</div></section>
+ 
+<section id="pricing"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Pricing</div><h2>Simple, <em>upfront pricing</em></h2><p>No surprises. Hosting and deployment are included in every option. Your site goes live without you lifting a finger.</p></div>
+  <div class="price-grid">
+    <div class="price reveal"><h3>Single Page</h3><div class="tagline">A complete, polished one-page site to get you online and getting calls.</div><div class="amt">$250<span> flat</span></div><div class="amt-sub">one-time · hosting &amp; setup included</div><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Complete one-page website</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Your choice of style</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Tap-to-call &amp; mobile-first</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Hosting &amp; deployment handled</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Search &amp; AI-ready markup</li></ul><a href="#contact" class="pill pill-line">Get started</a></div>
+    <div class="price featured reveal"><div class="badge">Most popular</div><h3>Custom Build</h3><div class="tagline">Multiple pages or custom features, billed hourly with a clear estimate up front.</div><div class="amt">$50<span>/hr</span></div><div class="amt-sub">capped estimate · hosting &amp; setup included</div><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Everything in Single Page</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Multiple pages or sections</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Custom features &amp; layout</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Written "not-to-exceed" estimate</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Hosting &amp; deployment handled</li></ul><a href="#contact" class="pill pill-solid">Get a quote</a></div>
+    <div class="price reveal"><h3>Components</h3><div class="tagline">Add a single reusable element to a site you already have.</div><div class="amt">$40<span>+ each</span></div><div class="amt-sub">per element · priced by type</div><ul><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Hero, CTA &amp; trust bars</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Service grids &amp; testimonials</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>FAQ &amp; service-area blocks</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Conversion pieces priced higher</li><li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Drop-in ready to use</li></ul><a href="components/components.html" target="_blank" class="pill pill-line">Browse components</a></div>
+  </div>
+  <p class="price-note reveal">Want ongoing support? Optional maintenance plans include content edits, updates, and hosting management to keep your site current without you touching any code. Ask about our maintenance plans.</p>
+</div></section>
+ 
+<section id="hosting" class="host"><div class="wrap"><div class="host-inner">
+  <div class="reveal">
+    <div class="kicker">Hosting, explained</div>
+    <h2>Your site needs somewhere to <em>live</em>. I handle that!</h2>
+    <p>A website has to be hosted somewhere to appear online. You don't need to figure that out or sign up for anything confusing. Setup and deployment are folded into every package, and I'll walk you through exactly where your site lives and what (if anything) it costs long-term.</p>
+  </div>
+  <ul class="reveal">
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Deployment included</b><span>I publish your finished site to fast, reliable hosting. You don't set up a thing.</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Free-tier friendly</b><span>Static sites can run on free hosting tiers, so ongoing costs are minimal or zero.</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Your own domain, optional</b><span>Want yourname.com? I'll set it up! You only pay the domain registrar's annual fee.</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>You own everything</b><span>The site and its hosting account are yours. No lock-in, no hostage situations.</span></div></li>
+  </ul>
+</div></div></section>
+ 
+<section id="process"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">How it works</div><h2>From call to <em>live site</em>, fast</h2></div>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><h4>Pick a style</h4><p>Browse the samples and tell me which look fits your business. That's the starting point.</p></div>
+    <div class="step reveal"><div class="n">2</div><h4>Send your details</h4><p>Services, service area, phone number, reviews, photos, whatever you've got. I shape it into the page.</p></div>
+    <div class="step reveal"><div class="n">3</div><h4>Review &amp; tweak</h4><p>You see the draft, we adjust the wording, colors, and details until it feels right.</p></div>
+    <div class="step reveal"><div class="n">4</div><h4>I deploy it live</h4><p>I publish it to hosting and hand you a working website. Ready to start ringing the phone.</p></div>
+  </div>
+</div></section>
+ 
+<section id="contact" class="final"><div class="wrap"><div class="final-inner reveal">
+  <h2>Let's get your business online.</h2>
+  <p>Tell me about your business and which style caught your eye. I'll put together a free, no-pressure quote.</p>
+  <form class="cform" id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Get your free key at web3forms.com (enter officialanvior@gmail.com) and paste it below -->
+    <input type="hidden" name="access_key" value="fe1e7e1e-1594-4d9c-a5dc-a10186cc1c7d">
+    <input type="hidden" name="subject" value="New quote request from your website">
+    <input type="hidden" name="from_name" value="Anvior Website">
+    <!-- honeypot anti-spam: real people leave this empty -->
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+    <div class="row2">
+      <div><label for="name">Your name</label><input type="text" id="name" name="name" required placeholder="Jane Smith"></div>
+      <div><label for="email">Your email</label><input type="email" id="email" name="email" required placeholder="you@email.com"></div>
+    </div>
+    <div class="row2">
+      <div><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(214) 555-0000"></div>
+      <div><label for="style">Style you liked</label><select id="style" name="style_interested_in"><option value="Not sure yet">Not sure yet</option><option>Modern Refined</option><option>Bold Editorial</option><option>Dark Premium</option><option>Warm &amp; Friendly</option><option>Clean Corporate</option><option>Energetic</option><option>Salon</option><option>Landscaping</option><option>Auto Garage</option><option>Food Truck</option><option>Cleaning Service</option><option>Just a component</option></select></div>
+    </div>
+    <label for="message">Tell me about your business</label>
+    <textarea id="message" name="message" required placeholder="What does your business do, where do you serve, and what do you need?"></textarea>
+    <button type="submit" class="pill pill-ember">Send my request</button>
+    <p class="note">No spam, no pressure. I'll reply by email.</p>
+  </form>
+  <div class="form-status" id="formStatus"></div>
+</div></div></section>
+ 
+<footer><div class="wrap foot">
+  <div class="logo"><img src="assets/anviortranslogo.png" alt="Anvior" style="height:40px;width:auto;display:block;"></div>
+  <div>Websites for small businesses · Dallas–Fort Worth</div>
+  <div>© 2026 · Built with care</div>
+</div></footer>
+<script>
+const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*50);io.unobserve(x.target);}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ 
+const form=document.getElementById('quoteForm');
+const status=document.getElementById('formStatus');
+if(form){form.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const btn=form.querySelector('button[type=submit]');
+  const original=btn.textContent;
+  btn.textContent='Sending…';btn.disabled=true;
+  try{
+    const data=new FormData(form);
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:data});
+    const json=await res.json();
+    if(json.success){
+      form.style.display='none';
+      status.className='form-status ok';
+      status.textContent="Thanks! Your request is on its way — I'll reply by email soon.";
+    }else{
+      status.className='form-status err';
+      status.textContent='Something went wrong. Please email officialanvior@gmail.com directly.';
+      btn.textContent=original;btn.disabled=false;
+    }
+  }catch(err){
+    status.className='form-status err';
+    status.textContent='Something went wrong. Please email officialanvior@gmail.com directly.';
+    btn.textContent=original;btn.disabled=false;
+  }
+});}
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotless Co. | Residential and Commercial Cleaning in Dallas</title>
+<meta name="description" content="Spotless Co.: professional residential and commercial cleaning in Dallas-Fort Worth. Insured, reliable, and thorough. Book your clean today. Call (214) 555-0258.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HouseCleaning","name":"Spotless Co.","telephone":"+1-214-555-0258","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},"areaServed":"Dallas-Fort Worth","priceRange":"$$"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--sky:#2a90d6;--sky-deep:#1f6fa8;--sky-soft:#5aaee0;--sky-pale:rgba(42,144,214,.08);--white:#ffffff;--off:#f7f9fc;--ink:#18202a;--ink-soft:#5a6472;--ink-faint:#9aa4ae;--line:#dde4ec;--font:"Plus Jakarta Sans",system-ui,sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font);background:var(--white);color:var(--ink);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-weight:800;line-height:1.06;letter-spacing:-.025em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px;}
+
+  .callbar{position:fixed;bottom:14px;left:14px;right:14px;z-index:90;background:var(--sky);color:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;font-weight:600;box-shadow:0 16px 40px -12px rgba(42,144,214,.55);}
+  .callbar svg{width:19px;height:19px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1100px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:-.02em;}
+  .logo .mk{width:36px;height:36px;background:var(--sky);border-radius:10px;display:grid;place-items:center;}
+  .logo .mk svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.2;}
+  .logo .sky{color:var(--sky);}
+  .nav-links{display:none;gap:28px;font-size:.95rem;font-weight:400;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--sky);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .nav-cta{background:var(--sky);color:#fff;padding:11px 22px;font-weight:600;font-size:.92rem;border-radius:100px;transition:background .2s;}
+  .nav-cta:hover{background:var(--sky-deep);}
+
+  /* hero: clean centered with large type and trust chips */
+  .hero{padding:90px 0 80px;text-align:center;background:linear-gradient(180deg,var(--off) 0%,var(--white) 100%);}
+  .hero .tag{display:inline-flex;align-items:center;gap:9px;background:var(--sky-pale);color:var(--sky);border:1px solid rgba(42,144,214,.2);padding:8px 18px;border-radius:100px;font-size:.84rem;font-weight:600;margin-bottom:26px;}
+  .hero .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--sky);}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);max-width:14ch;margin:0 auto 22px;}
+  .hero h1 .sky{color:var(--sky);}
+  .hero p{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--ink-soft);max-width:540px;margin:0 auto 34px;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;}
+  .btn{font-weight:600;border-radius:100px;padding:15px 28px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s;}
+  .btn svg{width:18px;height:18px;}
+  .btn-sky{background:var(--sky);color:#fff;box-shadow:0 12px 28px -10px rgba(42,144,214,.5);}
+  .btn-sky:hover{background:var(--sky-deep);transform:translateY(-2px);}
+  .btn-sky svg{fill:#fff;}
+  .btn-out{background:var(--white);color:var(--ink);border:1px solid var(--line);}
+  .btn-out:hover{border-color:var(--sky);transform:translateY(-2px);}
+  .trust-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:40px;}
+  .chip{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:100px;padding:9px 18px;font-size:.88rem;font-weight:500;box-shadow:0 2px 8px -4px rgba(0,0,0,.08);}
+  .chip svg{width:16px;height:16px;stroke:var(--sky);fill:none;stroke-width:2;}
+
+  section{padding:80px 0;}
+  .sec-label{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-bottom:14px;}
+  .sec-h{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:36px;}
+  .sec-h .sky{color:var(--sky);}
+
+  /* services: checklist two-column layout */
+  .svc-cols{display:grid;gap:40px;align-items:start;grid-template-columns:1fr;}
+  @media(min-width:880px){.svc-cols{grid-template-columns:1.1fr .9fr;gap:60px;}}
+  .svc-list{display:grid;gap:14px;}
+  .svc-item{display:flex;align-items:flex-start;gap:14px;background:var(--off);border:1px solid var(--line);border-radius:14px;padding:20px 22px;transition:border-color .25s,transform .25s;}
+  .svc-item:hover{border-color:var(--sky-soft);transform:translateX(4px);}
+  .svc-item .check{width:34px;height:34px;border-radius:50%;background:var(--sky);display:grid;place-items:center;flex-shrink:0;}
+  .svc-item .check svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2.5;}
+  .svc-item h3{font-size:1.08rem;font-weight:700;margin-bottom:4px;}
+  .svc-item p{color:var(--ink-soft);font-size:.9rem;}
+  .svc-side{display:flex;flex-direction:column;gap:18px;}
+  .svc-cta{background:var(--sky);color:#fff;border-radius:18px;padding:32px;text-align:center;}
+  .svc-cta h3{font-size:1.5rem;margin-bottom:10px;color:#fff;}
+  .svc-cta p{color:rgba(255,255,255,.85);font-size:.95rem;margin-bottom:20px;}
+  .svc-cta .btn-wh{background:#fff;color:var(--sky);border-radius:100px;padding:13px 24px;font-weight:600;display:inline-flex;align-items:center;gap:8px;font-size:.95rem;}
+  .svc-cta .btn-wh svg{fill:var(--sky);}
+  .included{background:var(--off);border:1px solid var(--line);border-radius:18px;padding:26px;}
+  .included h4{font-size:1.05rem;font-weight:700;margin-bottom:14px;}
+  .included ul{list-style:none;display:grid;gap:9px;}
+  .included li{display:flex;gap:10px;align-items:center;font-size:.92rem;color:var(--ink-soft);}
+  .included li svg{width:16px;height:16px;stroke:var(--sky);fill:none;stroke-width:2.5;flex-shrink:0;}
+
+  /* why band */
+  .band{background:var(--sky);color:#fff;}
+  .band-grid{display:grid;gap:30px;grid-template-columns:1fr;}
+  @media(min-width:760px){.band-grid{grid-template-columns:repeat(4,1fr);}}
+  .bw{text-align:center;padding:10px;}
+  .bw .ic{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);display:grid;place-items:center;margin:0 auto 16px;}
+  .bw .ic svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;}
+  .bw h3{font-size:1.1rem;margin-bottom:6px;color:#fff;}
+  .bw p{color:rgba(255,255,255,.78);font-size:.88rem;}
+
+  /* reviews */
+  .rev-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:var(--off);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--sky);letter-spacing:2px;margin-bottom:12px;}
+  .rev p{font-size:.98rem;margin-bottom:14px;}
+  .rev .who{font-weight:700;font-size:.9rem;}
+  .rev .who span{display:block;color:var(--ink-faint);font-size:.82rem;font-weight:300;}
+
+  /* final */
+  .final{background:var(--off);text-align:center;border-top:1px solid var(--line);}
+  .final h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:14px;}
+  .final p{color:var(--ink-soft);max-width:440px;margin:0 auto 28px;}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.5);padding:40px 0 110px;font-size:.86rem;}
+  @media(min-width:860px){footer{padding-bottom:40px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:.7s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+12145550258" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Book a clean (214) 555-0258</a>
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><span class="mk"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span>Spotless<span class="sky"> Co.</span></a>
+  <nav class="nav-links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#reviews">Reviews</a></nav>
+  <a href="tel:+12145550258" class="nav-cta">Book Now</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="tag"><span class="dot"></span> Residential and commercial · Dallas-Fort Worth</span>
+  <h1>A cleaner space, every single <span class="sky">time</span>.</h1>
+  <p>Professional cleaning for homes and businesses across DFW. Insured, consistent, and thorough, so you can focus on everything else.</p>
+  <div class="hero-btns">
+    <a href="tel:+12145550258" class="btn btn-sky"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0258</a>
+    <a href="#services" class="btn btn-out">See services</a>
+  </div>
+  <div class="trust-chips">
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5z"/></svg>Fully insured</div>
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8"/></svg>Background-checked team</div>
+    <div class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Reliable scheduling</div>
+    <div class="chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Satisfaction guaranteed</div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="sec-label reveal">What we clean</div>
+  <h2 class="sec-h reveal">Every space. <span class="sky">Done right.</span></h2>
+  <div class="svc-cols">
+    <div class="svc-list">
+      <div class="svc-item reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>Standard Clean</h3><p>Regular visits covering all rooms, surfaces, floors, and bathrooms.</p></div></div>
+      <div class="svc-item reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>Deep Clean</h3><p>A thorough top-to-bottom clean for move-ins, seasonal resets, or first-time service.</p></div></div>
+      <div class="svc-item reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>Move In / Move Out</h3><p>Detailed cleaning before you move in or after you move out, ready for inspection.</p></div></div>
+      <div class="svc-item reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>Commercial Cleaning</h3><p>Office and retail cleaning on a schedule that fits your business hours.</p></div></div>
+      <div class="svc-item reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>Post-Construction</h3><p>Dust, debris, and residue removed after renovation or new construction work.</p></div></div>
+    </div>
+    <div class="svc-side">
+      <div class="svc-cta reveal">
+        <h3>Ready to book?</h3>
+        <p>Call us and we will get you scheduled for a clean that fits your timeline and budget.</p>
+        <a href="tel:+12145550258" class="btn-wh"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0258</a>
+      </div>
+      <div class="included reveal">
+        <h4>Every clean includes:</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>All rooms swept and mopped</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Bathroom disinfecting</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Kitchen surfaces wiped down</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Dusting throughout</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Trash removed</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Satisfaction guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="why" class="band"><div class="wrap">
+  <div class="band-grid">
+    <div class="bw reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5z"/></svg></div><h3>Fully insured</h3><p>Every job is covered so you never have to worry.</p></div>
+    <div class="bw reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8"/></svg></div><h3>Vetted team</h3><p>Background-checked cleaners you can trust in your space.</p></div>
+    <div class="bw reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Consistent scheduling</h3><p>Same team, same time, every visit.</p></div>
+    <div class="bw reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><h3>100% guaranteed</h3><p>Not happy? We come back and make it right.</p></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="sec-label reveal">Reviews</div>
+  <h2 class="sec-h reveal">What clients <span class="sky">say.</span></h2>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"I come home every Tuesday to a spotless house. It has completely changed my week."</p><div class="who">Michelle T.<span>Dallas, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Used them for a move-out clean and got my full deposit back. Worth every penny."</p><div class="who">James K.<span>Irving, TX</span></div></div>
+    <div class="rev reveal"><div class="stars">★★★★★</div><p>"Our office has never been cleaner. They work around our schedule and the team is so professional."</p><div class="who">Priya N.<span>Plano, TX</span></div></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Ready for a cleaner space?</h2>
+  <p>Call to book or ask a question. We'll find the right service and schedule for you.</p>
+  <a href="tel:+12145550258" class="btn btn-sky"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0258</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>Spotless Co. · Residential and Commercial Cleaning · Dallas-Fort Worth</div>
+  <div>(214) 555-0258 · Sample site by Anvior</div>
+  <div>© 2026</div>
+</div></footer>
+<script>const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>

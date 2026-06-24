@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SA Air Service LLC | Dallas HVAC Repair, Install &amp; Maintenance</title>
+<meta name="description" content="SA Air Service LLC: over 13 years of HVAC experience serving commercial and residential clients in Dallas, TX. Maintenance, installations, duct cleaning and more. Call (214) 677-6263.">
+ 
+<!-- LocalBusiness schema: helps Google and AI search read and recommend the business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "SA Air Service LLC",
+  "telephone": "+1-214-677-6263",
+  "address": { "@type": "PostalAddress", "addressLocality": "Dallas", "addressRegion": "TX", "addressCountry": "US" },
+  "areaServed": "Dallas, TX and surrounding areas",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "$$",
+  "description": "Over 13 years of HVAC experience serving commercial and residential clients in Dallas. Maintenance, installations, duct cleaning, vent hood installation, and dryer vent cleaning."
+}
+</script>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* palette pulled from the SA Air Service logo: mountain blue, sun red, white */
+    --ink:#14233a; --ink-soft:#4f5d70; --ink-faint:#88909e; --canvas:#fbfaf8; --card:#ffffff;
+    --blue:#1f5fa8; --blue-deep:#15467e; --red:#d8362a; --red-deep:#b32519;
+    --line:#e7e6e1; --line-soft:#f0efe9;
+    --shadow-sm:0 1px 2px rgba(20,35,58,.04),0 4px 16px -8px rgba(20,35,58,.10);
+    --shadow-lg:0 30px 70px -32px rgba(31,95,168,.30);
+    --font-display:"Fraunces",Georgia,serif; --font-body:"Outfit",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--ink);background:var(--canvas);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:-.02em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+  .pill{border-radius:100px;font-family:var(--font-body);font-weight:500;display:inline-flex;align-items:center;gap:10px;transition:transform .3s,box-shadow .3s,background .3s;cursor:pointer;border:none;}
+  .pill svg{width:18px;height:18px;}
+  .pill-solid{background:var(--blue);color:#fff;padding:16px 28px;font-size:1rem;box-shadow:var(--shadow-sm);}
+  .pill-solid:hover{background:var(--blue-deep);transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+  .pill-solid svg{fill:#fff;}
+  .pill-line{background:transparent;color:var(--ink);padding:16px 28px;font-size:1rem;border:1px solid var(--line);}
+  .pill-line:hover{border-color:var(--ink);transform:translateY(-2px);}
+ 
+  /* sample banner */
+  .sample-banner{background:var(--red);color:#fff;text-align:center;padding:9px 16px;font-size:.85rem;font-weight:500;}
+ 
+  /* mobile sticky call bar */
+  .callbar{position:fixed;bottom:16px;left:16px;right:16px;z-index:90;background:var(--red);color:#fff;border-radius:100px;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;font-weight:500;font-size:1rem;box-shadow:0 16px 40px -12px rgba(216,54,42,.55);}
+  .callbar svg{width:19px;height:19px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+ 
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(251,250,248,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1140px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:600;font-size:1.12rem;}
+  .logo-mark{width:40px;height:40px;border-radius:50%;background:var(--blue);display:grid;place-items:center;position:relative;flex-shrink:0;}
+  .logo-mark::before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--red);top:8px;}
+  .logo-mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;margin-top:5px;}
+  .nav-links{display:none;gap:34px;font-size:.97rem;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--blue);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .nav .pill-solid{padding:11px 22px;font-size:.92rem;}
+ 
+  .hero{padding:80px 0 70px;position:relative;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 85% 12%,rgba(216,54,42,.08),transparent 42%),radial-gradient(circle at 8% 90%,rgba(31,95,168,.10),transparent 42%);}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:56px;align-items:center;}
+  @media(min-width:920px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:64px;}}
+  .tag{display:inline-flex;align-items:center;gap:9px;font-size:.83rem;font-weight:500;color:var(--blue);background:rgba(31,95,168,.08);padding:7px 15px;border-radius:100px;margin-bottom:28px;}
+  .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--red);}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.3rem);margin-bottom:24px;font-weight:400;}
+  .hero h1 em{font-style:italic;color:var(--blue);}
+  .hero .lead{font-size:clamp(1.05rem,1.9vw,1.2rem);color:var(--ink-soft);max-width:480px;margin-bottom:36px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;}
+  .hero-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px;box-shadow:var(--shadow-lg);}
+  .hero-card .hc-label{font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;}
+  .hero-card .hc-big{font-family:var(--font-display);font-size:2.6rem;font-weight:500;line-height:1;color:var(--blue);}
+  .hero-card .hc-sub{font-size:.92rem;color:var(--ink-soft);margin-bottom:26px;}
+  .hero-card .hc-row{display:flex;align-items:center;gap:13px;padding:13px 0;border-top:1px solid var(--line-soft);}
+  .hero-card .hc-row svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.7;flex-shrink:0;}
+  .hero-card .hc-row b{font-weight:500;font-size:.96rem;display:block;}
+  .hero-card .hc-row span{font-size:.85rem;color:var(--ink-soft);}
+ 
+  section{padding:88px 0;}
+  .sec-head{max-width:600px;margin-bottom:52px;}
+  .kicker{font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:400;}
+  .sec-head h2 em{font-style:italic;color:var(--blue);}
+ 
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr);}}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:32px 28px;transition:transform .35s,box-shadow .35s,border-color .35s;}
+  .svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent;}
+  .svc-ic{width:50px;height:50px;border-radius:12px;background:rgba(31,95,168,.08);display:grid;place-items:center;margin-bottom:20px;}
+  .svc-ic svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:1.5;}
+  .svc h3{font-size:1.22rem;margin-bottom:10px;font-weight:500;}
+  .svc p{color:var(--ink-soft);font-size:.95rem;}
+ 
+  .band{background:var(--ink);color:var(--canvas);}
+  .band .kicker{color:var(--red);}
+  .band h2{color:#fff;font-weight:400;}
+  .band h2 em{color:#fff;font-style:italic;}
+  .band-grid{display:grid;grid-template-columns:1fr;gap:46px;align-items:center;}
+  @media(min-width:880px){.band-grid{grid-template-columns:1fr 1fr;gap:70px;}}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 24px;}
+  .stat .num{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:500;line-height:1;color:var(--red);}
+  .stat .lbl{font-size:.9rem;color:rgba(251,250,248,.6);margin-top:8px;}
+  .band ul{list-style:none;}
+  .band li{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid rgba(251,250,248,.12);}
+  .band li svg{flex-shrink:0;width:22px;height:22px;stroke:var(--red);fill:none;stroke-width:1.9;margin-top:2px;}
+  .band li b{font-weight:500;display:block;margin-bottom:3px;}
+  .band li span{font-size:.9rem;color:rgba(251,250,248,.62);}
+ 
+  .rev-note{text-align:center;font-size:.82rem;color:var(--ink-faint);background:var(--line-soft);border-radius:8px;padding:10px;margin-bottom:30px;}
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:30px;}
+  .stars{display:flex;gap:3px;margin-bottom:16px;}
+  .stars svg{width:17px;height:17px;fill:var(--red);}
+  .rev p{font-family:var(--font-display);font-style:italic;font-size:1.05rem;line-height:1.5;margin-bottom:18px;font-weight:400;}
+  .rev .who{font-weight:500;font-size:.93rem;}
+  .rev .who span{display:block;color:var(--ink-faint);font-size:.84rem;font-weight:300;}
+ 
+  .area-tags{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px;}
+  .area-tags span{background:var(--card);border:1px solid var(--line);border-radius:100px;padding:11px 22px;font-size:.9rem;transition:border-color .2s,color .2s;}
+  .area-tags span:hover{border-color:var(--blue);color:var(--blue);}
+ 
+  .final{text-align:center;}
+  .final-inner{background:var(--blue);color:#fff;border-radius:28px;padding:78px 32px;position:relative;overflow:hidden;}
+  .final-inner::after{content:"";position:absolute;bottom:-80px;right:-40px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(216,54,42,.4),transparent 70%);}
+  .final h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:18px;font-weight:400;position:relative;}
+  .final p{max-width:460px;margin:0 auto 34px;color:rgba(255,255,255,.85);position:relative;}
+  .final .pill-solid{background:#fff;color:var(--blue);position:relative;font-size:1.1rem;padding:18px 38px;}
+  .final .pill-solid svg{fill:var(--blue);}
+  .final .pill-solid:hover{background:var(--canvas);}
+ 
+  footer{padding:54px 0 120px;color:var(--ink-faint);font-size:.9rem;border-top:1px solid var(--line);}
+  @media(min-width:860px){footer{padding-bottom:54px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;}
+ 
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+ 
+<div class="sample-banner">Sample website preview built for SA Air Service LLC by Anvior. Details and reviews are examples and easy to update.</div>
+ 
+<a href="tel:+12146776263" class="callbar">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  Call (214) 677-6263
+</a>
+ 
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M3 18l5-7 4 5 3-4 6 6"/></svg></span> SA Air Service LLC</a>
+  <nav class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#area">Service Area</a>
+  </nav>
+  <a href="tel:+12146776263" class="pill pill-solid">(214) 677-6263</a>
+</div></header>
+ 
+<section class="hero"><div class="wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="tag"><span class="dot"></span> Commercial &amp; residential · Dallas, TX</span>
+      <h1>Dallas comfort, backed by <em>13+ years</em> of experience.</h1>
+      <p class="lead">SA Air Service LLC keeps Dallas homes and businesses comfortable with dependable HVAC maintenance, installation, and cleaning. One call and we're on it.</p>
+      <div class="hero-cta">
+        <a href="tel:+12146776263" class="pill pill-solid">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          (214) 677-6263
+        </a>
+        <a href="#services" class="pill pill-line">Our services</a>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <div class="hc-label">Serving Dallas</div>
+      <div class="hc-big">13+ yrs</div>
+      <div class="hc-sub">of hands-on HVAC experience.</div>
+      <div class="hc-row"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><div><b>Commercial &amp; residential</b><span>Homes and businesses both</span></div></div>
+      <div class="hc-row"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg><div><b>Full-service HVAC</b><span>Repair, install, and cleaning</span></div></div>
+      <div class="hc-row"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><div><b>Easy to reach</b><span>(214) 677-6263</span></div></div>
+    </div>
+  </div>
+</div></section>
+ 
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">What we do</div><h2>Full-service heating, cooling &amp; <em>air</em></h2></div>
+  <div class="svc-grid">
+    <div class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Maintenance</h3><p>Keep your system running efficiently and head off breakdowns before they start, for homes and businesses alike.</p></div>
+    <div class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div><h3>Installations</h3><p>Professional installation of heating and cooling systems sized correctly for your space.</p></div>
+    <div class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div><h3>Duct Cleaning</h3><p>Clear out dust and buildup for cleaner air and better airflow throughout the building.</p></div>
+    <div class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V8l6-4 6 4v12M9 20v-6h6v6"/></svg></div><h3>Vent Hood Installation</h3><p>Proper kitchen and exhaust vent hood installation for residential and commercial spaces.</p></div>
+    <div class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M5 7h14M5 17h14"/></svg></div><h3>Dryer Vent Pipe Cleaning</h3><p>Clear lint and blockages from dryer vent lines to improve safety and dryer performance.</p></div>
+    <div class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M9.5 2v4M14.5 2v4M5 8h14v11a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg></div><h3>Commercial &amp; Residential</h3><p>Trusted by both homeowners and businesses across the Dallas area.</p></div>
+  </div>
+</div></section>
+ 
+<section id="why" class="band"><div class="wrap"><div class="band-grid">
+  <div class="reveal">
+    <div class="kicker">Why SA Air Service</div>
+    <h2 style="margin-bottom:28px;">Experience you can <em>count on</em></h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">13+</div><div class="lbl">Years of experience</div></div>
+      <div class="stat"><div class="num">2</div><div class="lbl">Markets: home &amp; business</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Core services</div></div>
+      <div class="stat"><div class="num">1</div><div class="lbl">Quick call to book</div></div>
+    </div>
+  </div>
+  <ul class="reveal">
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Over a decade in HVAC</b><span>13+ years of hands-on experience across Dallas.</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Homes and businesses</b><span>Equipped for both residential and commercial work.</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>One number, real service</b><span>Call (214) 677-6263 and talk to the people doing the work.</span></div></li>
+  </ul>
+</div></div></section>
+ 
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker">Reviews</div><h2>What customers <em>say</em></h2></div>
+  <div class="rev-note">Note: these are sample reviews shown as examples. Your real customer reviews would go here.</div>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div><p>"Sample review: prompt, professional, and they explained everything clearly. Highly recommend."</p><div class="who">Customer Name<span>Example review</span></div></div>
+    <div class="rev reveal"><div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div><p>"Sample review: fair pricing and quality work on our duct cleaning. Will use them again."</p><div class="who">Customer Name<span>Example review</span></div></div>
+    <div class="rev reveal"><div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div><p>"Sample review: showed up on time and got our system running again fast. Great service."</p><div class="who">Customer Name<span>Example review</span></div></div>
+  </div>
+</div></section>
+ 
+<section id="area" style="background:var(--line-soft);"><div class="wrap">
+  <div class="sec-head reveal" style="margin-bottom:0;">
+    <div class="kicker">Where we work</div>
+    <h2>Serving <em>Dallas</em> and nearby</h2>
+    <p style="color:var(--ink-soft);margin-top:18px;">Based in Dallas, TX, serving commercial and residential clients across the area. Not sure if you're in range? Just call and ask.</p>
+    <div class="area-tags">
+      <span>Dallas</span><span>Garland</span><span>Mesquite</span><span>Irving</span><span>Richardson</span><span>Plano</span>
+    </div>
+  </div>
+</div></section>
+ 
+<section class="final"><div class="wrap"><div class="final-inner reveal">
+  <h2>Need heating, cooling, or cleaning?</h2>
+  <p>Call SA Air Service LLC and get straight to someone who can help. Homes and businesses welcome.</p>
+  <a href="tel:+12146776263" class="pill pill-solid">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    (214) 677-6263
+  </a>
+</div></div></section>
+ 
+<footer><div class="wrap foot">
+  <div class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M3 18l5-7 4 5 3-4 6 6"/></svg></span> SA Air Service LLC</div>
+  <div>Commercial &amp; Residential HVAC · Dallas, TX · (214) 677-6263</div>
+  <div>Sample preview by Anvior</div>
+</div></footer>
+ 
+<script>
+const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*60);io.unobserve(x.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
