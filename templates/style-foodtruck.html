@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolling Feast | Dallas Food Truck and Catering</title>
+<meta name="description" content="Rolling Feast: Dallas food truck and catering. Fresh, bold flavors brought straight to you. Check our schedule and book us for your next event. Call (214) 555-0234.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FoodEstablishment","name":"Rolling Feast","telephone":"+1-214-555-0234","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},"servesCuisine":"American","priceRange":"$"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--saffron:#f0b429;--saffron-deep:#d49800;--green:#1a4d2e;--green-soft:#2d6b42;--offwhite:#fdf8ef;--card:#ffffff;--ink:#1c1a14;--ink-soft:#6b6044;--line:#e8dfc8;--disp:"Righteous",cursive;--body:"DM Sans",system-ui,sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);background:var(--offwhite);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--disp);line-height:1.0;letter-spacing:.01em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px;}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;font-family:var(--disp);font-size:1.1rem;letter-spacing:.03em;}
+  .callbar svg{width:20px;height:20px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+
+  header.nav{position:sticky;top:0;z-index:80;background:var(--green);border-bottom:3px solid var(--saffron);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1120px;margin:0 auto;}
+  .logo{font-family:var(--disp);color:#fff;font-size:1.5rem;display:flex;align-items:center;gap:11px;}
+  .logo .mk{width:36px;height:36px;background:var(--saffron);border-radius:50%;display:grid;place-items:center;}
+  .logo .mk svg{width:20px;height:20px;fill:var(--green);}
+  .logo .saf{color:var(--saffron);}
+  .nav-links{display:none;gap:26px;font-size:.95rem;color:rgba(255,255,255,.7);}
+  .nav-links a:hover{color:var(--saffron);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .nav-cta{font-family:var(--disp);background:var(--saffron);color:var(--green);padding:11px 22px;font-size:1rem;border-radius:6px;transition:background .2s;}
+  .nav-cta:hover{background:var(--saffron-deep);}
+
+  /* hero: large angled split with menu-card preview */
+  .hero{background:var(--green);color:#fff;padding:70px 0 0;overflow:hidden;position:relative;}
+  .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:var(--offwhite);clip-path:polygon(0 100%,100% 100%,100% 0);}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;padding-bottom:80px;}
+  @media(min-width:880px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:50px;}}
+  .hero .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(240,180,41,.18);color:var(--saffron);border:1px solid rgba(240,180,41,.35);padding:7px 15px;border-radius:100px;font-size:.84rem;font-weight:500;margin-bottom:24px;}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);margin-bottom:18px;}
+  .hero h1 .saf{color:var(--saffron);}
+  .hero p{color:rgba(255,255,255,.82);font-size:1.12rem;max-width:440px;margin-bottom:30px;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:13px;}
+  .btn{font-family:var(--disp);border-radius:8px;padding:15px 26px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;font-size:1rem;transition:transform .2s,background .2s;}
+  .btn svg{width:18px;height:18px;}
+  .btn-saf{background:var(--saffron);color:var(--green);}
+  .btn-saf:hover{background:var(--saffron-deep);transform:translateY(-2px);}
+  .btn-saf svg{fill:var(--green);}
+  .btn-out{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);}
+  .btn-out:hover{border-color:var(--saffron);color:var(--saffron);}
+  /* menu preview card */
+  .menu-card{background:var(--card);border-radius:18px;padding:28px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);}
+  .menu-card .mc-head{font-family:var(--disp);color:var(--green);font-size:1rem;letter-spacing:.06em;margin-bottom:16px;display:flex;align-items:center;gap:9px;}
+  .menu-card .mc-head::after{content:"";flex:1;height:1px;background:var(--line);}
+  .menu-item{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);}
+  .menu-item:last-child{border-bottom:none;}
+  .menu-item .nm{font-weight:500;font-size:1.02rem;color:var(--ink);}
+  .menu-item .nm small{display:block;font-size:.82rem;color:var(--ink-soft);font-weight:300;}
+  .menu-item .pr{font-family:var(--disp);color:var(--green);font-size:1.1rem;}
+  .menu-card .mc-note{font-size:.78rem;color:var(--ink-soft);margin-top:14px;text-align:center;}
+
+  section{padding:80px 0;}
+  .sec-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(26,77,46,.1);color:var(--green);border-radius:100px;padding:6px 14px;font-size:.8rem;font-weight:500;letter-spacing:.04em;margin-bottom:14px;}
+  .sec-h{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:36px;}
+  .sec-h .saf{color:var(--saffron);}
+  .sec-h .grn{color:var(--green);}
+
+  /* what we do: feature rows */
+  .feat-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:640px){.feat-grid{grid-template-columns:1fr 1fr;}}
+  .feat{background:var(--card);border-radius:14px;padding:28px;border-bottom:4px solid var(--saffron);transition:transform .3s,box-shadow .3s;}
+  .feat:nth-child(even){border-bottom-color:var(--green);}
+  .feat:hover{transform:translateY(-5px);box-shadow:0 20px 40px -20px rgba(26,77,46,.3);}
+  .feat .ic{width:52px;height:52px;border-radius:50%;background:rgba(240,180,41,.15);display:grid;place-items:center;margin-bottom:16px;}
+  .feat:nth-child(even) .ic{background:rgba(26,77,46,.1);}
+  .feat .ic svg{width:27px;height:27px;stroke:var(--saffron-deep);fill:none;stroke-width:1.8;}
+  .feat:nth-child(even) .ic svg{stroke:var(--green-soft);}
+  .feat h3{font-size:1.3rem;margin-bottom:8px;}
+  .feat p{color:var(--ink-soft);font-size:.95rem;}
+
+  /* schedule band */
+  .sched{background:var(--green);color:#fff;padding:70px 0;}
+  .sched-inner{display:grid;gap:36px;align-items:center;grid-template-columns:1fr;}
+  @media(min-width:760px){.sched-inner{grid-template-columns:1fr 1fr;gap:56px;}}
+  .sched h2{font-size:clamp(2rem,5vw,3rem);color:#fff;margin-bottom:16px;}
+  .sched p{color:rgba(255,255,255,.78);margin-bottom:22px;}
+  .sched .locs{display:grid;gap:11px;}
+  .loc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px;}
+  .loc svg{width:20px;height:20px;stroke:var(--saffron);fill:none;stroke-width:1.8;flex-shrink:0;}
+  .loc b{display:block;font-weight:500;margin-bottom:2px;}
+  .loc span{font-size:.86rem;color:rgba(255,255,255,.62);}
+
+  /* reviews */
+  .rev-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:var(--card);border-radius:14px;padding:26px;position:relative;}
+  .rev .mark{font-family:var(--disp);font-size:3.5rem;color:var(--saffron);opacity:.2;position:absolute;top:10px;left:18px;line-height:1;}
+  .stars{color:var(--saffron);letter-spacing:2px;margin-bottom:12px;}
+  .rev p{margin-bottom:14px;font-size:1rem;position:relative;}
+  .rev .who{font-family:var(--disp);font-size:.9rem;color:var(--green);}
+  .rev .who span{display:block;font-family:var(--body);color:var(--ink-soft);font-size:.82rem;}
+
+  /* final */
+  .final{background:var(--saffron);text-align:center;padding:80px 0;}
+  .final h2{font-size:clamp(2.2rem,5.5vw,3.8rem);color:var(--green);margin-bottom:14px;}
+  .final p{color:var(--green);max-width:420px;margin:0 auto 28px;font-weight:500;}
+  .final .btn-grn{background:var(--green);color:#fff;}
+  .final .btn-grn svg{fill:#fff;}
+  .final .btn-grn:hover{background:var(--green-soft);}
+
+  footer{background:var(--green);color:rgba(255,255,255,.55);padding:40px 0 110px;font-size:.86rem;}
+  @media(min-width:860px){footer{padding-bottom:40px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:.7s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+12145550234" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Book us (214) 555-0234</a>
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><span class="mk"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></span>Rolling <span class="saf">Feast</span></a>
+  <nav class="nav-links"><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#schedule">Schedule</a><a href="#reviews">Reviews</a></nav>
+  <a href="tel:+12145550234" class="nav-cta">Book Now</a>
+</div></header>
+
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <span class="tag">Dallas food truck + catering</span>
+    <h1>Fresh food, <span class="saf">bold flavors</span>, right to you.</h1>
+    <p>Rolling Feast brings crave-worthy street food to events, office parks, and neighborhoods across the Dallas area. Follow us, find us, and book us.</p>
+    <div class="hero-btns">
+      <a href="tel:+12145550234" class="btn btn-saf"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0234</a>
+      <a href="#catering" class="btn btn-out">Book for your event</a>
+    </div>
+  </div>
+  <div class="menu-card reveal">
+    <div class="mc-head">Today's Menu</div>
+    <div class="menu-item"><div class="nm">Smoked Brisket Tacos<small>3 per order, house slaw</small></div><div class="pr">$12</div></div>
+    <div class="menu-item"><div class="nm">Street Corn Bowl<small>grilled elote, cotija, lime</small></div><div class="pr">$10</div></div>
+    <div class="menu-item"><div class="nm">Crispy Chicken Sandwich<small>pickled jalap, garlic aioli</small></div><div class="pr">$11</div></div>
+    <div class="menu-item"><div class="nm">Loaded Fries<small>cheese, green onion, bacon</small></div><div class="pr">$8</div></div>
+    <div class="mc-note">Menu rotates. Call or follow us for today's full lineup.</div>
+  </div>
+</div></div></section>
+
+<section id="menu"><div class="wrap">
+  <div class="sec-tag reveal">What we do</div>
+  <h2 class="sec-h reveal">More than a food truck. <span class="grn">A whole experience.</span></h2>
+  <div class="feat-grid">
+    <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><h3>Food Truck</h3><p>Find us parked around Dallas. Check the schedule for our weekly stops across the metroplex.</p></div>
+    <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Private Events</h3><p>Birthdays, weddings, corporate events, and block parties. We bring the whole setup to you.</p></div>
+    <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><h3>Office Catering</h3><p>Lunch drops and team meals for offices across DFW. Easy ordering, no hassle.</p></div>
+    <div class="feat reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Pre-Order &amp; Reserve</h3><p>Skip the line by pre-ordering for pickup, or reserve us for your next event date.</p></div>
+  </div>
+</div></section>
+
+<section id="schedule" class="sched"><div class="wrap"><div class="sched-inner">
+  <div class="reveal">
+    <h2>Find us this week.</h2>
+    <p>We post weekly stops on our social pages. Here are our regular spots, check the page for exact times.</p>
+    <a href="tel:+12145550234" class="btn btn-saf">Book us for your event</a>
+  </div>
+  <div class="locs reveal">
+    <div class="loc"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Downtown Dallas</b><span>Tues and Thurs lunch</span></div></div>
+    <div class="loc"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Addison Farmers Market</b><span>Saturday mornings</span></div></div>
+    <div class="loc"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Private events</b><span>Call to book your location</span></div></div>
+  </div>
+</div></div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="sec-tag reveal">Reviews</div>
+  <h2 class="sec-h reveal">The people have <span class="saf">spoken.</span></h2>
+  <div class="rev-grid">
+    <div class="rev reveal"><div class="mark">"</div><div class="stars">★★★★★</div><p>"The brisket tacos are unreal. Found the truck by accident and now I plan my Tuesdays around it."</p><div class="who">Kevin M.<span>Dallas, TX</span></div></div>
+    <div class="rev reveal"><div class="mark">"</div><div class="stars">★★★★★</div><p>"Hired them for our company lunch and the team was blown away. Easy to book, great food, zero fuss."</p><div class="who">Sarah L.<span>Plano, TX</span></div></div>
+    <div class="rev reveal"><div class="mark">"</div><div class="stars">★★★★★</div><p>"Booked for my daughter's graduation. Every single person asked who the caterer was. Perfect."</p><div class="who">David R.<span>Richardson, TX</span></div></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Hungry? Let's talk.</h2>
+  <p>For event bookings, catering quotes, or just to find out where we are this week, give us a call.</p>
+  <a href="tel:+12145550234" class="btn btn-grn"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0234</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>Rolling Feast · Dallas, TX · Food Truck + Catering</div>
+  <div>(214) 555-0234 · Sample site by Anvior</div>
+  <div>© 2026</div>
+</div></footer>
+<script>const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>

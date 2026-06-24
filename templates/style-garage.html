@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ironclad Auto | Honest Auto Repair in Dallas</title>
+<meta name="description" content="Ironclad Auto: honest, dependable auto repair in Dallas. All makes and models. Call (214) 555-0210.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Ironclad Auto","telephone":"+1-214-555-0210","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},"openingHours":"Mo-Sa 07:00-18:00","priceRange":"$$"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--concrete:#1a1c1e;--concrete-2:#242628;--concrete-3:#2e3032;--neon:#d4f000;--neon-deep:#a8c000;--steel:#8a9099;--ink:#f0f2f4;--ink-soft:#9aa3ad;--line:rgba(255,255,255,.09);--disp:"Bebas Neue",sans-serif;--body:"Barlow",system-ui,sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);background:var(--concrete);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--disp);line-height:.95;letter-spacing:.02em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+
+  /* diagonal stripe divider */
+  .stripe{height:44px;background:repeating-linear-gradient(45deg,var(--neon) 0,var(--neon) 10px,var(--concrete) 10px,var(--concrete) 20px);}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--neon);color:var(--concrete);display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;font-family:var(--disp);letter-spacing:.06em;font-size:1.3rem;}
+  .callbar svg{width:22px;height:22px;fill:var(--concrete);}
+  @media(min-width:860px){.callbar{display:none;}}
+
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(26,28,30,.92);backdrop-filter:blur(10px);border-bottom:3px solid var(--neon);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 26px;max-width:1160px;margin:0 auto;}
+  .logo{font-family:var(--disp);font-size:1.8rem;letter-spacing:.06em;display:flex;align-items:center;gap:12px;}
+  .logo .mk{width:38px;height:38px;background:var(--neon);display:grid;place-items:center;border-radius:4px;}
+  .logo .mk svg{width:22px;height:22px;fill:var(--concrete);}
+  .logo .neon{color:var(--neon);}
+  .nav-links{display:none;gap:28px;font-family:var(--disp);letter-spacing:.06em;font-size:1.1rem;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--neon);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .nav-cta{font-family:var(--disp);letter-spacing:.06em;background:var(--neon);color:var(--concrete);padding:11px 22px;font-size:1.1rem;transition:background .2s;}
+  .nav-cta:hover{background:var(--neon-deep);}
+
+  /* hero: big angled type with neon underline accent */
+  .hero{padding:80px 0 0;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;top:0;right:0;width:55%;height:100%;background:var(--concrete-2);clip-path:polygon(15% 0,100% 0,100% 100%,0% 100%);z-index:0;}
+  .hero .wrap{position:relative;z-index:1;}
+  .hero .badge{display:inline-flex;align-items:center;gap:9px;background:var(--neon);color:var(--concrete);font-family:var(--disp);letter-spacing:.1em;font-size:.95rem;padding:7px 16px;margin-bottom:24px;}
+  .hero h1{font-size:clamp(4rem,11vw,8.5rem);margin-bottom:6px;}
+  .hero h1 .alt{color:var(--neon);}
+  .hero h1 .out{-webkit-text-stroke:2px var(--neon);color:transparent;}
+  .hero .under{width:160px;height:6px;background:var(--neon);margin-bottom:24px;}
+  .hero p{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--ink-soft);max-width:460px;margin-bottom:32px;}
+  .hero-row{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:60px;}
+  .btn{font-family:var(--disp);letter-spacing:.06em;font-size:1.15rem;padding:16px 30px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;transition:transform .2s,background .2s;}
+  .btn svg{width:20px;height:20px;}
+  .btn-neon{background:var(--neon);color:var(--concrete);}
+  .btn-neon:hover{background:var(--neon-deep);transform:skewX(-2deg);}
+  .btn-neon svg{fill:var(--concrete);}
+  .btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink-soft);}
+  .btn-outline:hover{border-color:var(--neon);color:var(--neon);}
+  .trust-row{display:flex;flex-wrap:wrap;gap:16px 28px;padding:20px 0;border-top:1px solid var(--line);}
+  .trust-row span{font-size:.88rem;color:var(--ink-soft);display:flex;align-items:center;gap:7px;}
+  .trust-row svg{width:15px;height:15px;stroke:var(--neon);fill:none;stroke-width:2;}
+
+  section{padding:80px 0;}
+  .sec-label{font-family:var(--disp);letter-spacing:.16em;color:var(--neon);font-size:.9rem;margin-bottom:12px;}
+  .sec-h{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:36px;}
+  .sec-h .neon{color:var(--neon);}
+
+  /* services: repair-order table style */
+  .ro-table{width:100%;border-collapse:collapse;border:1px solid var(--line);}
+  .ro-table thead tr{background:var(--neon);}
+  .ro-table thead th{font-family:var(--disp);letter-spacing:.08em;color:var(--concrete);padding:16px 20px;text-align:left;font-size:1.05rem;}
+  .ro-table tbody tr{border-bottom:1px solid var(--line);transition:background .2s;}
+  .ro-table tbody tr:hover{background:var(--concrete-3);}
+  .ro-table td{padding:18px 20px;vertical-align:middle;}
+  .ro-table td.num{font-family:var(--disp);color:var(--neon);font-size:1.1rem;width:56px;}
+  .ro-table td.svc-name{font-family:var(--disp);font-size:1.4rem;width:220px;}
+  .ro-table td.svc-desc{color:var(--ink-soft);font-size:.94rem;}
+  .ro-table td.svc-status{width:110px;}
+  .ro-status{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:4px;}
+  .ro-status.avail{background:rgba(212,240,0,.12);color:var(--neon);}
+  .ro-status.same{background:rgba(212,240,0,.22);color:var(--neon);}
+
+  /* stats band */
+  .band{background:var(--neon);}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,.15);}
+  @media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:var(--neon);padding:36px 20px;text-align:center;}
+  .stat .v{font-family:var(--disp);font-size:clamp(2.8rem,6vw,4rem);color:var(--concrete);line-height:1;}
+  .stat .l{font-size:.9rem;color:var(--concrete);font-weight:600;margin-top:6px;letter-spacing:.04em;}
+
+  /* promises: horizontal checklist */
+  .promise-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:640px){.promise-grid{grid-template-columns:1fr 1fr;}}
+  .promise{display:flex;gap:16px;align-items:flex-start;background:var(--concrete-2);border:1px solid var(--line);padding:24px;}
+  .promise .check{width:34px;height:34px;background:var(--neon);display:grid;place-items:center;flex-shrink:0;}
+  .promise .check svg{width:18px;height:18px;stroke:var(--concrete);fill:none;stroke-width:2.5;}
+  .promise h3{font-size:1.2rem;margin-bottom:5px;}
+  .promise p{color:var(--ink-soft);font-size:.92rem;}
+
+  /* reviews: big single rotating quote */
+  .rev-stage{background:var(--concrete-2);padding:64px 0;text-align:center;border-top:3px solid var(--neon);}
+  .quote-wrap{max-width:720px;margin:0 auto;padding:0 26px;min-height:180px;position:relative;}
+  .q-item{display:none;animation:qfade .5s ease;}
+  .q-item.active{display:block;}
+  @keyframes qfade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  .q-stars{color:var(--neon);letter-spacing:4px;font-size:1.1rem;margin-bottom:20px;}
+  .q-text{font-family:var(--disp);font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.1;color:var(--ink);margin-bottom:22px;}
+  .q-who{font-size:.88rem;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase;}
+  .q-dots{display:flex;gap:10px;justify-content:center;margin-top:30px;}
+  .q-dot{width:10px;height:10px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s;}
+  .q-dot.on{background:var(--neon);}
+
+  /* final */
+  .final{background:var(--concrete-2);text-align:center;border-top:4px solid var(--neon);}
+  .final h2{font-size:clamp(2.6rem,7vw,5.5rem);margin-bottom:16px;}
+  .final h2 .neon{color:var(--neon);}
+  .final p{color:var(--ink-soft);max-width:440px;margin:0 auto 28px;}
+
+  footer{background:#111214;padding:36px 0 110px;color:var(--ink-soft);font-size:.86rem;border-top:1px solid var(--line);}
+  @media(min-width:860px){footer{padding-bottom:36px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;}
+  .foot .logo{font-size:1.4rem;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:.65s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+12145550210" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>CALL (214) 555-0210</a>
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><span class="mk"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6.3 6.3 1.4 1.4 6.3-6.3a4 4 0 005.4-5.4l-2.1 2.1-1.4-1.4z"/></svg></span>IRON<span class="neon">CLAD</span></a>
+  <nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a></nav>
+  <a href="tel:+12145550210" class="nav-cta">(214) 555-0210</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="badge"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--concrete)"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>All Makes &amp; Models · Dallas, TX</div>
+  <h1>WE<br>FIX<br><span class="out">CARS</span>.</h1>
+  <div class="under"></div>
+  <p>Honest, dependable auto repair from a shop that treats your car like it's their own. No surprises, no upsells, no runaround.</p>
+  <div class="hero-row">
+    <a href="tel:+12145550210" class="btn btn-neon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0210</a>
+    <a href="#services" class="btn btn-outline">Our services</a>
+  </div>
+  <div class="trust-row">
+    <span><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>ASE-certified techs</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 100 14A7 7 0 0012 2z"/><path d="M12 16v2M12 20v2M8 18H6M18 18h-2"/></svg>Free diagnostics with repair</span>
+    <span><svg viewBox="0 0 24 24"><path d="M3 12l3-9h12l3 9M5 12v7h14v-7"/></svg>All makes and models</span>
+    <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>12-month / 12k mile warranty</span>
+  </div>
+</div></section>
+
+<div class="stripe"></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-label reveal">01 / What we fix</div>
+  <h2 class="sec-h reveal">Every job. <span class="neon">Done right.</span></h2>
+  <table class="ro-table reveal">
+    <thead><tr><th>#</th><th>Service</th><th>Details</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td class="num">01</td><td class="svc-name">Engine Repair</td><td class="svc-desc">Full diagnostics to rebuilds. We find the root cause, not just the symptom.</td><td class="svc-status"><span class="ro-status avail">Available</span></td></tr>
+      <tr><td class="num">02</td><td class="svc-name">Brakes &amp; Rotors</td><td class="svc-desc">Pads, rotors, calipers, and brake fluid service to keep you stopping safely.</td><td class="svc-status"><span class="ro-status same">Same Day</span></td></tr>
+      <tr><td class="num">03</td><td class="svc-name">AC &amp; Heating</td><td class="svc-desc">System recharge, leak repair, and full climate control service.</td><td class="svc-status"><span class="ro-status avail">Available</span></td></tr>
+      <tr><td class="num">04</td><td class="svc-name">Oil &amp; Fluids</td><td class="svc-desc">Oil changes, transmission, coolant, and all fluid inspections.</td><td class="svc-status"><span class="ro-status same">Same Day</span></td></tr>
+      <tr><td class="num">05</td><td class="svc-name">Electrical</td><td class="svc-desc">Battery, alternator, starter, and full wiring diagnostics on all vehicles.</td><td class="svc-status"><span class="ro-status avail">Available</span></td></tr>
+      <tr><td class="num">06</td><td class="svc-name">Tires &amp; Alignment</td><td class="svc-desc">Mounting, balancing, rotation, and four-wheel alignment checks.</td><td class="svc-status"><span class="ro-status same">Same Day</span></td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<div class="stripe"></div>
+
+<section id="why" class="band"><div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><div class="v">20+</div><div class="l">Years in Dallas</div></div>
+    <div class="stat reveal"><div class="v">All</div><div class="l">Makes &amp; models</div></div>
+    <div class="stat reveal"><div class="v">12mo</div><div class="l">Warranty on repairs</div></div>
+    <div class="stat reveal"><div class="v">4.9★</div><div class="l">Customer rating</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-label reveal">02 / The Ironclad standard</div>
+  <h2 class="sec-h reveal">What you can <span class="neon">always expect.</span></h2>
+  <div class="promise-grid">
+    <div class="promise reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>Upfront estimates</h3><p>You see the price before we start. Nothing added without your approval.</p></div></div>
+    <div class="promise reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>ASE-certified technicians</h3><p>Every tech is certified and experienced on all makes and models.</p></div></div>
+    <div class="promise reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>12-month / 12,000-mile warranty</h3><p>We stand behind the work long after you drive off the lot.</p></div></div>
+    <div class="promise reveal"><div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><h3>No upselling, ever</h3><p>We fix what you brought it in for and tell you honestly what else we see.</p></div></div>
+  </div>
+</div></section>
+
+<div class="stripe"></div>
+
+<section id="reviews" class="rev-stage">
+  <div class="sec-label">03 / Reviews</div>
+  <h2 class="sec-h" style="margin-bottom:44px;">Straight from <span class="neon">customers.</span></h2>
+  <div class="quote-wrap">
+    <div class="q-item active">
+      <div class="q-stars">★★★★★</div>
+      <div class="q-text">"Brought in my truck with an engine light. Fixed same day, fair price, no surprises. These guys are legit."</div>
+      <div class="q-who">Marcus D. &mdash; Dallas, TX</div>
+    </div>
+    <div class="q-item">
+      <div class="q-stars">★★★★★</div>
+      <div class="q-text">"Every other shop quoted me twice the price. Ironclad diagnosed it right and fixed it for less. Won't go anywhere else."</div>
+      <div class="q-who">Carla R. &mdash; Garland, TX</div>
+    </div>
+    <div class="q-item">
+      <div class="q-stars">★★★★★</div>
+      <div class="q-text">"Brakes done in two hours and they showed me exactly what was worn out. Honest shop, good people."</div>
+      <div class="q-who">James T. &mdash; Irving, TX</div>
+    </div>
+  </div>
+  <div class="q-dots">
+    <div class="q-dot on" data-i="0"></div>
+    <div class="q-dot" data-i="1"></div>
+    <div class="q-dot" data-i="2"></div>
+  </div>
+</section>
+
+<section class="final"><div class="wrap">
+  <h2>READY WHEN <span class="neon">YOU ARE.</span></h2>
+  <p>Drop by or give us a call. Free estimate on most repairs and a straight answer on what your car actually needs.</p>
+  <a href="tel:+12145550210" class="btn btn-neon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0210</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div class="logo">IRON<span style="color:var(--neon)">CLAD</span> AUTO</div>
+  <div>Dallas, TX · All makes &amp; models · Sample site by Anvior</div>
+  <div>© 2026 · Ironclad Auto</div>
+</div></footer>
+<script>
+const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*50);io.unobserve(x.target);}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// rotating quote
+const items=document.querySelectorAll('.q-item');
+const dots=document.querySelectorAll('.q-dot');
+let cur=0;
+function show(n){items[cur].classList.remove('active');dots[cur].classList.remove('on');cur=n;items[cur].classList.add('active');dots[cur].classList.add('on');}
+dots.forEach(d=>d.addEventListener('click',()=>show(+d.dataset.i)));
+setInterval(()=>show((cur+1)%items.length),4200);
+</script>
+</body>
+</html>

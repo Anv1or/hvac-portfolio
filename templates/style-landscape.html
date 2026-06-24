@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groundwork Lawn and Landscape | Dallas Lawn Care</title>
+<meta name="description" content="Groundwork Lawn and Landscape: professional lawn care, landscaping, and maintenance across Dallas-Fort Worth. Free estimates. Call (214) 555-0247.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LandscapingBusiness","name":"Groundwork Lawn and Landscape","telephone":"+1-214-555-0247","address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},"areaServed":"Dallas-Fort Worth","openingHours":"Mo-Sa 07:00-18:00","priceRange":"$$"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--forest:#1a3a24;--forest-2:#243d2e;--sage:#4a7c5c;--sage-soft:#6a9b7a;--stone:#f0ece4;--stone-2:#e6e0d4;--sand:#d4c8b0;--ink:#1a1a16;--ink-soft:#5a5a4a;--ink-faint:#9a9a86;--line:#d8d0bc;--disp:"Playfair Display",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);background:var(--stone);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.1;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px;}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:500;font-size:1rem;letter-spacing:.04em;}
+  .callbar svg{width:19px;height:19px;fill:#fff;}
+  @media(min-width:860px){.callbar{display:none;}}
+
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(240,236,228,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1120px;margin:0 auto;}
+  .logo{font-family:var(--disp);font-size:1.3rem;font-weight:700;display:flex;align-items:center;gap:11px;}
+  .logo .mk{width:38px;height:38px;background:var(--forest);border-radius:6px;display:grid;place-items:center;}
+  .logo .mk svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;}
+  .logo .grn{color:var(--sage);}
+  .nav-links{display:none;gap:26px;font-size:.95rem;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--forest);}
+  @media(min-width:860px){.nav-links{display:flex;}}
+  .nav-cta{background:var(--forest);color:#fff;padding:11px 22px;font-weight:500;font-size:.9rem;letter-spacing:.04em;transition:background .2s;border-radius:6px;}
+  .nav-cta:hover{background:var(--sage);}
+
+  /* hero: full-width nature scene with overlapping text */
+  .hero{background:var(--forest);color:#fff;padding:90px 0;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(74,124,92,.4),transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(26,58,36,.6),transparent 45%);}
+  .hero-grid{position:relative;z-index:1;display:grid;gap:50px;align-items:center;grid-template-columns:1fr;}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:60px;}}
+  .hero .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-soft);margin-bottom:18px;}
+  .hero h1{font-size:clamp(2.8rem,6.5vw,5rem);color:#fff;margin-bottom:20px;}
+  .hero h1 .sage{color:var(--sage-soft);}
+  .hero p{color:rgba(255,255,255,.78);font-size:1.12rem;max-width:460px;margin-bottom:30px;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:13px;}
+  .btn{border-radius:8px;padding:15px 26px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;font-size:1rem;font-weight:500;transition:transform .2s,background .2s;}
+  .btn svg{width:18px;height:18px;}
+  .btn-white{background:#fff;color:var(--forest);}
+  .btn-white:hover{background:var(--stone);transform:translateY(-2px);}
+  .btn-white svg{fill:var(--forest);}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);}
+  .btn-ghost:hover{border-color:#fff;}
+  /* stat card */
+  .stat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:30px;backdrop-filter:blur(4px);}
+  .stat-card .sc-row{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+  .stat-card .sc-row:last-child{border-bottom:none;}
+  .stat-card .sc-row svg{width:24px;height:24px;stroke:var(--sage-soft);fill:none;stroke-width:1.7;flex-shrink:0;}
+  .stat-card .sc-row b{font-weight:600;display:block;margin-bottom:2px;}
+  .stat-card .sc-row span{font-size:.86rem;color:rgba(255,255,255,.62);}
+
+  section{padding:84px 0;}
+  .sec-eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;}
+  .sec-h{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:36px;}
+  .sec-h .grn{color:var(--forest);}
+
+  /* process strip */
+  .process-strip{background:var(--forest-2);padding:64px 0;}
+  .steps{display:grid;gap:0;grid-template-columns:1fr;}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);}}
+  .step{padding:36px 32px;border-bottom:1px solid rgba(255,255,255,.08);position:relative;}
+  @media(min-width:760px){.step{border-bottom:none;border-right:1px solid rgba(255,255,255,.08);}.step:last-child{border-right:none;}}
+  .step::after{content:attr(data-n);position:absolute;bottom:24px;right:28px;font-family:var(--disp);font-size:3.5rem;font-weight:700;color:rgba(255,255,255,.05);line-height:1;}
+  .step .ic{width:52px;height:52px;border-radius:50%;background:rgba(74,124,92,.25);display:grid;place-items:center;margin-bottom:18px;}
+  .step .ic svg{width:26px;height:26px;stroke:var(--sage-soft);fill:none;stroke-width:1.8;}
+  .step h3{font-size:1.35rem;color:#fff;margin-bottom:10px;}
+  .step p{color:rgba(255,255,255,.66);font-size:.95rem;}
+
+  /* services: vertical timeline */
+  .timeline{position:relative;padding:20px 0;}
+  .timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--sage) 8%,var(--sage) 92%,transparent);transform:translateX(-50%);}
+  @media(max-width:719px){.timeline::before{left:28px;}}
+  .tl-item{display:grid;grid-template-columns:1fr;gap:0;margin-bottom:52px;position:relative;}
+  @media(min-width:720px){.tl-item{grid-template-columns:1fr 60px 1fr;align-items:center;}}
+  .tl-item:last-child{margin-bottom:0;}
+  /* dot on the line */
+  .tl-dot{display:flex;align-items:center;justify-content:center;z-index:1;position:relative;}
+  .tl-dot .d{width:48px;height:48px;border-radius:50%;background:var(--forest);border:3px solid var(--sage);display:grid;place-items:center;}
+  .tl-dot .d svg{width:22px;height:22px;stroke:var(--sage-soft);fill:none;stroke-width:1.8;}
+  @media(max-width:719px){.tl-dot{position:absolute;left:4px;top:0;}.tl-dot .d{width:48px;height:48px;}}
+  /* left/right content panels */
+  .tl-left,.tl-right{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
+  .tl-left{text-align:right;}
+  @media(max-width:719px){.tl-left,.tl-right{margin-left:68px;text-align:left;}}
+  /* odd items: text left, blank right */
+  .tl-item:nth-child(odd) .tl-right{background:transparent;border:none;}
+  /* even items: blank left, text right */
+  .tl-item:nth-child(even) .tl-left{background:transparent;border:none;}
+  @media(max-width:719px){.tl-item:nth-child(odd) .tl-right,.tl-item:nth-child(even) .tl-left{display:none;}}
+  .tl-left h3,.tl-right h3{font-size:1.35rem;margin-bottom:8px;color:var(--forest);}
+  .tl-left p,.tl-right p{color:var(--ink-soft);font-size:.94rem;}
+  .tl-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(26,58,36,.1);color:var(--forest);padding:4px 10px;border-radius:4px;margin-bottom:10px;}
+
+  /* reviews: rating bar layout */
+  .rev-band{background:var(--stone-2);}
+  .rev-layout{display:grid;gap:40px;align-items:start;grid-template-columns:1fr;}
+  @media(min-width:860px){.rev-layout{grid-template-columns:280px 1fr;gap:56px;}}
+  .rating-block{background:#fff;border-radius:14px;padding:30px;border:1px solid var(--line);}
+  .rating-block .big-num{font-family:var(--disp);font-size:4.5rem;font-weight:700;color:var(--forest);line-height:1;}
+  .rating-block .big-stars{color:var(--sage);letter-spacing:2px;font-size:1.1rem;margin:4px 0 16px;}
+  .rb-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .rb-row .lbl{font-size:.78rem;font-weight:600;color:var(--ink-soft);width:30px;text-align:right;}
+  .rb-row .bar{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden;}
+  .rb-row .fill{height:100%;border-radius:4px;background:var(--sage);}
+  .rb-row .cnt{font-size:.78rem;color:var(--ink-faint);width:16px;}
+  .quotes{display:flex;flex-direction:column;gap:18px;}
+  .q{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--line);border-left:4px solid var(--sage);}
+  .q .stars{color:var(--sage);letter-spacing:2px;font-size:.85rem;margin-bottom:10px;}
+  .q p{font-size:.98rem;margin-bottom:11px;}
+  .q .who{font-weight:600;font-size:.88rem;color:var(--forest);}
+  .q .who span{display:block;color:var(--ink-faint);font-size:.8rem;font-weight:300;}
+
+  /* final */
+  .final{background:var(--forest);color:#fff;text-align:center;padding:84px 0;}
+  .final h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:14px;color:#fff;}
+  .final p{color:rgba(255,255,255,.78);max-width:440px;margin:0 auto 28px;}
+  .final .btn-white{font-size:1.05rem;padding:16px 34px;}
+
+  footer{background:#111a13;color:rgba(255,255,255,.5);padding:40px 0 110px;font-size:.86rem;}
+  @media(min-width:860px){footer{padding-bottom:40px;}}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:.7s;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<a href="tel:+12145550247" class="callbar"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Free estimate (214) 555-0247</a>
+<header class="nav"><div class="nav-inner">
+  <a href="#" class="logo"><span class="mk"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-7 17.3M12 2a10 10 0 017 17.3M12 22V12M7 9l5 3 5-3"/></svg></span>Ground<span class="grn">work</span></a>
+  <nav class="nav-links"><a href="#process">How it works</a><a href="#services">Services</a><a href="#reviews">Reviews</a></nav>
+  <a href="tel:+12145550247" class="nav-cta">Free Estimate</a>
+</div></header>
+
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <div class="eyebrow">Lawn care + landscaping · Dallas-Fort Worth</div>
+    <h1>A yard you're <span class="sage">proud</span> to come home to.</h1>
+    <p>Professional lawn care, landscaping, and seasonal maintenance across DFW. Free estimates, dependable crews, and results you can actually see.</p>
+    <div class="hero-btns">
+      <a href="tel:+12145550247" class="btn btn-white"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Get a free estimate</a>
+      <a href="#services" class="btn btn-ghost">See our services</a>
+    </div>
+  </div>
+  <div class="stat-card reveal">
+    <div class="sc-row"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg><div><b>Reliable weekly service</b><span>Same crew, same day, every week.</span></div></div>
+    <div class="sc-row"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><div><b>Free estimates</b><span>No commitment, just a quote.</span></div></div>
+    <div class="sc-row"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8"/></svg><div><b>Licensed and insured</b><span>Fully covered on every job.</span></div></div>
+  </div>
+</div></div></section>
+
+<section id="process" class="process-strip"><div class="wrap">
+  <div class="sec-eyebrow" style="color:var(--sage-soft)" >How it works</div>
+  <h2 class="sec-h" style="color:#fff;margin-bottom:44px;">Up and running <span style="color:var(--sage-soft)">in three steps.</span></h2>
+  <div class="steps">
+    <div class="step reveal" data-n="1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><h3>You call, we come out</h3><p>We visit the property, assess what's needed, and give you a free, no-pressure estimate on the spot.</p></div>
+    <div class="step reveal" data-n="2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><h3>We agree on the plan</h3><p>You approve the scope and schedule. Weekly mowing, full landscaping, one-time cleanups, your call.</p></div>
+    <div class="step reveal" data-n="3"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-7 17.3M12 2a10 10 0 017 17.3M12 22V12"/></svg></div><h3>Your yard transforms</h3><p>We show up reliably, do the work, and you come home to a yard that looks exactly how it should.</p></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="sec-eyebrow reveal">Services</div>
+  <h2 class="sec-h reveal">Everything your <span class="grn">yard needs.</span></h2>
+  <div class="timeline">
+
+    <div class="tl-item reveal">
+      <div class="tl-left"><div class="tl-tag">Weekly</div><h3>Lawn Mowing</h3><p>Consistent cuts on a schedule you set. Same reliable crew, same results, every single visit.</p></div>
+      <div class="tl-dot"><div class="d"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div></div>
+      <div class="tl-right"></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left"></div>
+      <div class="tl-dot"><div class="d"><svg viewBox="0 0 24 24"><path d="M6 3v12M18 9a6 6 0 00-12 0"/></svg></div></div>
+      <div class="tl-right"><div class="tl-tag">Design</div><h3>Landscaping</h3><p>Planting, mulching, bed maintenance, and full design to make your property stand out from the street.</p></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left"><div class="tl-tag">Detail</div><h3>Trimming and Edging</h3><p>Sharp lines along driveways, walkways, and garden beds for that professional finished look.</p></div>
+      <div class="tl-dot"><div class="d"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-7 17.3M12 2a10 10 0 017 17.3"/></svg></div></div>
+      <div class="tl-right"></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left"></div>
+      <div class="tl-dot"><div class="d"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div></div>
+      <div class="tl-right"><div class="tl-tag">Seasonal</div><h3>Cleanup and Leaf Removal</h3><p>Spring and fall cleanups that clear debris and prep your yard for the season ahead.</p></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left"><div class="tl-tag">Irrigation</div><h3>Sprinkler Service</h3><p>Startup, winterization, and repair to keep your lawn watered efficiently year-round.</p></div>
+      <div class="tl-dot"><div class="d"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div></div>
+      <div class="tl-right"></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left"></div>
+      <div class="tl-dot"><div class="d"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div></div>
+      <div class="tl-right"><div class="tl-tag">Commercial</div><h3>Commercial Properties</h3><p>Maintenance contracts for offices, retail fronts, and HOA properties across DFW.</p></div>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="reviews" class="rev-band"><div class="wrap">
+  <div class="sec-eyebrow reveal">Reviews</div>
+  <h2 class="sec-h reveal">Neighbors who <span class="grn">noticed the difference.</span></h2>
+  <div class="rev-layout">
+    <div class="rating-block reveal">
+      <div class="big-num">4.9</div>
+      <div class="big-stars">★★★★★</div>
+      <div class="rb-row"><span class="lbl">5★</span><div class="bar"><div class="fill" style="width:90%"></div></div><span class="cnt">18</span></div>
+      <div class="rb-row"><span class="lbl">4★</span><div class="bar"><div class="fill" style="width:10%"></div></div><span class="cnt">2</span></div>
+      <div class="rb-row"><span class="lbl">3★</span><div class="bar"><div class="fill" style="width:0%"></div></div><span class="cnt">0</span></div>
+      <div class="rb-row"><span class="lbl">2★</span><div class="bar"><div class="fill" style="width:0%"></div></div><span class="cnt">0</span></div>
+      <div class="rb-row"><span class="lbl">1★</span><div class="bar"><div class="fill" style="width:5%"></div></div><span class="cnt">1</span></div>
+    </div>
+    <div class="quotes">
+      <div class="q reveal"><div class="stars">★★★★★</div><p>"Same crew every week. They know my yard and they care. Best decision I've made for my home."</p><div class="who">Linda H.<span>Plano, TX</span></div></div>
+      <div class="q reveal"><div class="stars">★★★★★</div><p>"Free estimate, fair price, showed up exactly when they said they would. Rare these days."</p><div class="who">Tony A.<span>Garland, TX</span></div></div>
+      <div class="q reveal"><div class="stars">★★★★★</div><p>"Hired them for a spring cleanup and now I'm on a weekly plan. My yard has never looked better."</p><div class="who">Sandra M.<span>Mesquite, TX</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Ready for a yard you love?</h2>
+  <p>Call for a free estimate with no obligation. We'll come out, take a look, and give you a straight quote.</p>
+  <a href="tel:+12145550247" class="btn btn-white"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(214) 555-0247</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>Groundwork Lawn and Landscape · Dallas-Fort Worth</div>
+  <div>(214) 555-0247 · Sample site by Anvior</div>
+  <div>© 2026</div>
+</div></footer>
+<script>const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*55);io.unobserve(x.target);}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>
